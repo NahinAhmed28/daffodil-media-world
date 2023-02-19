@@ -3,9 +3,8 @@
 
 {{--        <h1 class="logo"><a href="#">Public Side</a></h1>--}}
         <!-- Uncomment below if you prefer to use an image logo -->
-     <a href="{{route('public')}}" class="logo"><img src="{{asset('frontend/assets/img/cti_logo.png')}}"
-{{--                                                     style=" background-color: rgba(255,255,255,0.44);" --}}
-                                                     alt="" class="img-fluid"></a>
+        <a href="#" class="logo"><img src="{{asset('frontend/assets/img/logo.png')}}" alt="" class="img-fluid"></a>
+
 
         <nav id="navbar" class="navbar">
 
@@ -63,6 +62,5 @@
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
-    <a href="#" class="logo"><img src="{{asset('frontend/assets/img/logo.png')}}" alt="" class="img-fluid"></a>
     </div>
 </header>

@@ -6,26 +6,10 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-info">
 
-
-
-
-
-
-
-
-
-
-
-                        <h3> Samiul Hoque </h3>
+                        <h3>Engr. MD yeasin Reza </h3>
                         <p>
-                            Head of Administration <br>
-                            Center for Trade and Investment <br>
-                            University of Dhaka <br>
-                            Room: 9050-52, 8th Floor, MBA Building, <br>
-                            Faculty of Business Studies, <br>
-                            University of Dhaka<br>
-                            <strong>Email :</strong>  samiulhoque63@yahoo.com<br>
-                            <strong>Cell :</strong>  01717044316<br>
+                           BSC in CSE <br>
+                           Executive Business Development <br>
                         </p>
                         <div class="social-links mt-3">
                             <a href="https://www.facebook.com/ctidu" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -52,7 +36,11 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>Samiul Hoque</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Daffodil Media</span></strong>. All Rights Reserved
+        </div>
+
+        <div class="float-right">
+          created by Nahin Ahmed
         </div>
     </div>
 </footer>
