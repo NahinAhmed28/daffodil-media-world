@@ -6,33 +6,33 @@
     <div class="m-3" style="margin-bottom: 20px">
 
         <div class="button-list-flex">
-            <h4>Create Member</h4>
+            <h4>Create Product</h4>
 
-            <a href="{{ route('member.index') }}">
+            <a href="{{ route('product.index') }}">
                 <button class="btn btn-primary" href>
-                    Member List
+                    Product List
                 </button>
             </a>
         </div>
 
 
-        <form action="{{route('member.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('product.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
-                    <label for="title">Member Name</label>
-                    <input type="text" name="name"
-                        class="form-control md-2 {{ $errors->has('name') ? 'is-invalid' : '' }}"
-                        value="{{ old('name') }}" placeholder="Write Your Title" />
-                    @if ($errors->has('name'))
-                    <div class="invalid-feedback">{{ $errors->first('name') }}</div>
+                    <label for="title">Product Title</label>
+                    <input type="text" name="title"
+                        class="form-control md-2 {{ $errors->has('title') ? 'is-invalid' : '' }}"
+                        value="{{ old('title') }}" placeholder="Write Your Title" />
+                    @if ($errors->has('title'))
+                    <div class="invalid-feedback">{{ $errors->first('title') }}</div>
                     @endif
                 </div>
             </div>
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
-                    <label>Member Image</label>
+                    <label>Product Image</label>
                     <div class="custom-file">
                         <input type="file" name="image"
                             class="custom-file-input form-control {{ $errors->has('image') ? 'is-invalid' : '' }}"

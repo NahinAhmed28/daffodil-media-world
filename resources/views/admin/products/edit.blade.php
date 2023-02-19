@@ -6,17 +6,17 @@
     <div class="card-body table-full-width table-responsive">
 
         <div class="button-list-flex">
-            <h4> Member Details Edit</h4>
+            <h4> Product Details Edit</h4>
 
-            <a href="{{ route('member.index') }}">
+            <a href="{{ route('product.index') }}">
                 <button class="btn btn-primary" href>
-                    Member List
+                    Product List
                 </button>
             </a>
         </div>
 
         <!--begin::Form-->
-        <form action="{{route('member.update', $member->id)}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('product.update', $product->id)}}" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="row">
@@ -26,7 +26,7 @@
                         <div class="form-group  m-form__group">
                             <label class="form-control-label"><span class="text-danger">*</span> Name </label>
                             <textarea class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" id="name" placeholder="" rows="3" name="name" cols="50">{{
-                                old('name', $member->name) }}</textarea>
+                                old('name', $product->name) }}</textarea>
                             @if ($errors->has('name'))
                             <div class="invalid-feedback">{{ $errors->first('name') }}</div>
                             @endif
@@ -36,7 +36,7 @@
                         <div class="form-group  m-form__group">
                             <label class="form-control-label"><span class="text-danger">*</span> Designation </label>
                             <textarea class="form-control {{ $errors->has('designation') ? 'is-invalid' : '' }}" id="designation" placeholder="" rows="3" name="designation"
-                                cols="50">{{ old('designation', $member->designation)
+                                cols="50">{{ old('designation', $product->designation)
                                 }}</textarea>
                             @if ($errors->has('designation'))
                             <div class="invalid-feedback">{{ $errors->first('designation') }}</div>
@@ -47,7 +47,7 @@
                         <div class="form-group  m-form__group">
                             <label class="form-control-label"><span class="text-danger">*</span> Designation </label>
                             <textarea class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}" id="message" placeholder="" rows="3" name="message"
-                                cols="50">{{ old('message', $member->message)
+                                cols="50">{{ old('message', $roduct->message)
                                 }}</textarea>
                             @if ($errors->has('message'))
                             <div class="invalid-feedback">{{ $errors->first('message') }}</div>
@@ -56,12 +56,12 @@
                     </div>
 
 
-                    {{-- member image area --}}
+                    {{-- product image area --}}
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group">
                             <div class="service-flex">
-                                <label class="form-control-label">Member Image</label>
-                                <img class="img-thumbnail" src="{{ asset('assets/uploads/member/'.$member->image)}}"
+                                <label class="form-control-label">Product Image</label>
+                                <img class="img-thumbnail" src="{{ asset('assets/uploads/product/'.$product->image)}}"
                                     width="200px">
                             </div>
                             <div class="custom-file">
@@ -80,7 +80,7 @@
                     </div>
                     <div class="m-portlet__foot m-portlet__foot--fit">
                         <div class="m-form__actions text-center flexbox">
-                            <a href="{{ route('member.index') }}" class="btn btn-danger btn-flex"><i
+                            <a href="{{ route('product.index') }}" class="btn btn-danger btn-flex"><i
                                     class="fa fa-times"></i> Cancel</a>
                             <button type="submit" class="btn btn-success btn-flex"><i class="fa fa-save"></i>
                                 Save</button>

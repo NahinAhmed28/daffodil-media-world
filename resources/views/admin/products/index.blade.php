@@ -7,9 +7,9 @@
     <div class="card-body table-full-width table-responsive">
 
         <div class="button-list-flex">
-            <h4> <strong class="text-bg-primary">Members LIST</strong></h4>
+            <h4> <strong class="text-bg-primary">Product LIST</strong></h4>
 
-            <a href="{{ route('member.create') }}">
+            <a href="{{ route('product.create') }}">
                 <button class="btn btn-primary" href>
                     Create New Member
                 </button>
@@ -28,21 +28,21 @@
 
             </thead>
             <tbody>
-                @foreach($members as $member)
+                @foreach($products as $product)
                 <tr>
-                    <td>{{$member->id}}</td>
+                    <td>{{$product->id}}</td>
                     <td>
                         <img class="img-thumbnail image-height"
-                            src="{{ asset('assets/uploads/member/'.$member->image)}}">
+                            src="{{ asset('assets/uploads/product/'.$product->image)}}">
                     </td>
-                    <td>{{$member->name}}</td>
-                    <td>{!!$member->designation!!}</td>
-                    <td>{!!$member->message!!}</td>
+                    <td>{{$product->name}}</td>
+                    <td>{!!$product->designation!!}</td>
+                    <td>{!!$product->message!!}</td>
                     <td>
-                        <a href="{{ route('member.edit',[$member->id]) }}" title="Edit">
+                        <a href="{{ route('product.edit',[$product->id]) }}" title="Edit">
                             <button class="btn btn-outline-primary btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>
                             </button></a>
-                        <form method="POST" action="{{ route('member.destroy' ,  [$member->id]) }}"
+                        <form method="POST" action="{{ route('product.destroy' ,  [$product->id]) }}"
                             accept-charset="UTF-8" style="display:inline">
                             @method('DELETE')
                             @csrf
@@ -56,7 +56,7 @@
             </tbody>
         </table>
         <div class="d-flex justify-content-center">
-            {!! $members->links() !!}
+            {!! $products->links() !!}
         </div>
     </div>
 </div>
