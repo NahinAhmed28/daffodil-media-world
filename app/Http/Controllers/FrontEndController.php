@@ -15,6 +15,7 @@ use App\Models\Mission;
 use App\Models\OngoingResearch;
 use App\Models\Organization;
 use App\Models\Plan;
+use App\Models\Product;
 use App\Models\Publication;
 use App\Models\Service;
 use App\Models\Training;
@@ -65,6 +66,14 @@ class FrontEndController extends Controller
             'services' => Service::get(),
         ];
         return view('frontend.layouts.service', $data);
+    }
+
+    public function product()
+    {
+        $data = [
+            'products' => Product::get(),
+        ];
+        return view('frontend.layouts.product', $data);
     }
     public function expertise()
     {
