@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Expertise;
-use App\Models\Fellowship;
 use App\Models\Gallery;
 use App\Models\Hero;
 use App\Models\Mission;
