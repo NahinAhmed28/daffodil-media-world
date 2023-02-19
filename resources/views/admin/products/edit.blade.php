@@ -47,7 +47,7 @@
                         <div class="form-group  m-form__group">
                             <label class="form-control-label"><span class="text-danger">*</span> Designation </label>
                             <textarea class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}" id="message" placeholder="" rows="3" name="message"
-                                cols="50">{{ old('message', $roduct->message)
+                                cols="50">{{ old('message', $product->message)
                                 }}</textarea>
                             @if ($errors->has('message'))
                             <div class="invalid-feedback">{{ $errors->first('message') }}</div>
