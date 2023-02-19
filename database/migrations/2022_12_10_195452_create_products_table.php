@@ -13,11 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('internships', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description');
-            $table->string('image')->nullable();
+            $table->string('description');
+            $table->string('model');
+            $table->string('category');
+            $table->string('stock');
+            $table->tinyInteger('status')->default('1');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('internships');
+        Schema::dropIfExists('products');
     }
 };

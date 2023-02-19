@@ -20,31 +20,7 @@
                     </ul>
                 </li>
 
-{{--                <li class="dropdown"><a href="#"><span>Academic</span> <i class="bi bi-chevron-down"></i></a>--}}
-{{--                    <ul>--}}
-{{--                        <li><a href="{{route('public.higher-education')}}">Higher Education</a></li>--}}
-{{--                        <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>--}}
-{{--                            <ul>--}}
-{{--                                <li><a href="#">Deep Drop Down 1</a></li>--}}
-{{--                                <li><a href="#">Deep Drop Down 2</a></li>--}}
-{{--                                <li><a href="#">Deep Drop Down 3</a></li>--}}
-{{--                                <li><a href="#">Deep Drop Down 4</a></li>--}}
-{{--                                <li><a href="#">Deep Drop Down 5</a></li>--}}
-{{--                            </ul>--}}
-{{--                        </li>--}}
-{{--                        <li><a href="{{route('public.training')}}">Training</a></li>--}}
-{{--                        <li><a href="{{route('public.internship')}}">Internship</a></li>--}}
-{{--                        <li><a href="{{route('public.fellowship')}}">Fellowship</a></li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
                 <li><a class="nav-link scrollto" href="{{route('public.organization')}}">Organization</a></li>
-                <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="{{route('public.ongoing-research')}}">Ongoing Research</a></li>
-                        <li><a href="{{route('public.completed-research')}}">Completed Research</a></li>
-                        <li><a href="{{route('public.publication')}}">Publication</a></li>
-                    </ul>
-                </li>
                 <li><a class="nav-link scrollto" href="{{route('public.gallery')}}">Gallery</a></li>
                 <li><a class="nav-link scrollto" href="{{route('public.contact')}}">Contact</a></li>
                 @if (Route::has('login'))

@@ -104,6 +104,16 @@ Technology.<o:p></o:p></span></span></p>',
             'video'=> 'https://www.youtube.com/watch?v=T7BMndEDYLc',
         ]);
 
+        DB::table('products')->insert([
+            'title' => 'title',
+            'description' => 'description description description description',
+            'model' => 'default MODEL' ,
+            'category' => 'default CATEGORY' ,
+            'stock' => 10 ,
+            'status' => 1 ,
+            'created_at'=>	now(),
+            'updated_at'=>now(),
+        ]);
         DB::table('missions')->insert([
             'title' => 'title',
             'description' => 'description description description description',
@@ -152,53 +162,7 @@ Technology.<o:p></o:p></span></span></p>',
             'updated_at'=>now(),
         ]);
 
-        DB::table('completed_research')->insert([
-            'title' => 'title',
-            'description' => 'description description description description',
-            'created_at'=>	now(),
-            'updated_at'=>now(),
-        ]);
-        DB::table('ongoing_research')->insert([
-            'title' => 'title',
-            'description' => 'description description description description',
-            'created_at'=>	now(),
-            'updated_at'=>now(),
-        ]);
 
-        DB::table('trainings')->insert([
-            'title' => 'title',
-            'description' => 'description description description description',
-            'image' => 'default.png',
-            'created_at'=>	now(),
-            'updated_at'=>now(),
-        ]);
-        DB::table('fellowships')->insert([
-            'title' => 'title',
-            'description' => 'description description description description',
-            'image' => 'default.png',
-            'created_at'=>	now(),
-            'updated_at'=>now(),
-        ]);
-        DB::table('higher_education')->insert([
-            'title' => 'title',
-            'description' => 'description description description description',
-            'image' => 'default.png',
-            'created_at'=>	now(),
-            'updated_at'=>now(),
-        ]);
-        DB::table('internships')->insert([
-            'title' => 'title',
-            'description' => 'description description description description',
-            'image' => 'default.png',
-            'created_at'=>	now(),
-            'updated_at'=>now(),
-        ]);
-        DB::table('publications')->insert([
-            'title' => 'title',
-            'description' => 'description description description description',
-            'created_at'=>	now(),
-            'updated_at'=>now(),
-        ]);
         DB::table('expertises')->insert([
             'title' => 'title',
             'description' => 'description description description description',
