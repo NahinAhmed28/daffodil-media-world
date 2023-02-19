@@ -3,22 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
-use App\Models\CompletedResearch;
 use App\Models\Contact;
 use App\Models\Expertise;
 use App\Models\Fellowship;
 use App\Models\Gallery;
 use App\Models\Hero;
-use App\Models\HigherEducation;
-use App\Models\Internship;
 use App\Models\Mission;
-use App\Models\OngoingResearch;
 use App\Models\Organization;
 use App\Models\Plan;
 use App\Models\Product;
-use App\Models\Publication;
 use App\Models\Service;
-use App\Models\Training;
 use App\Models\Vision;
 use App\Models\Member;
 
@@ -101,48 +95,7 @@ class FrontEndController extends Controller
 
         return view('frontend.layouts.contact');
     }
-    public function higherEducation()
-    {
-        $data = [
-            'highereducations' => HigherEducation::get(),
-        ];
-        return view('frontend.layouts.higher-education', $data);
-    }
-    public function internship()
-    {
-        $data = [
-            'internships' => Internship::get(),
-        ];
-        return view('frontend.layouts.internship', $data);
-    }
-    public function training()
-    {
-        $data = [
-            'trainings' => Training::get(),
-        ];
-        return view('frontend.layouts.training', $data);
-    }
-    public function fellowship()
-    {
-        $data = [
-            'fellowships' => Fellowship::get(),
-        ];
-        return view('frontend.layouts.fellowship', $data);
-    }
-    public function completedResearch()
-    {
-        $data = [
-            'completedresearches' => CompletedResearch::get(),
-        ];
-        return view('frontend.layouts.completed-research', $data);
-    }
-    public function ongoingResearch()
-    {
-        $data = [
-            'ongoingresearches' => OngoingResearch::get(),
-        ];
-        return view('frontend.layouts.ongoing-research', $data);
-    }
+
     public function organization()
     {
         $data = [
@@ -152,13 +105,7 @@ class FrontEndController extends Controller
 
         return view('frontend.layouts.organization', $data);
     }
-    public function publication()
-    {
-        $data = [
-            'publications' => Publication::get(),
-        ];
-        return view('frontend.layouts.publication', $data);
-    }
+
     public function gallery()
     {
         $data = [
