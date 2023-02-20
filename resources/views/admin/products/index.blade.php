@@ -21,9 +21,11 @@
             <thead class="badge-light">
                 <th>ID</th>
                 <th>Image</th>
-                <th>Name</th>
-                <th>Designation</th>
-                <th>Message</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Model</th>
+                <th>Stock</th>
+                <th>status</th>
                 <th>Action </th>
 
             </thead>
@@ -35,9 +37,11 @@
                         <img class="img-thumbnail image-height"
                             src="{{ asset('assets/uploads/product/'.$product->image)}}">
                     </td>
-                    <td>{{$product->name}}</td>
-                    <td>{!!$product->designation!!}</td>
-                    <td>{!!$product->message!!}</td>
+                    <td>{{$product->title}}</td>
+                    <td>{!!$product->description!!}</td>
+                    <td>{!!$product->model!!}</td>
+                    <td>{!!$product->stock!!}</td>
+                    <td>{!!$product->status!!}</td>
                     <td>
                         <a href="{{ route('product.edit',[$product->id]) }}" title="Edit">
                             <button class="btn btn-outline-primary btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>

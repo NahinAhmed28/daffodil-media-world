@@ -49,21 +49,49 @@
             </div>
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
-                    <label for="title">Designation</label>
-                    <textarea class="form-control {{ $errors->has('designation') ? 'is-invalid' : '' }}" id="designation" placeholder="Write Your Designation"
-                        name="designation"></textarea>
-                    @if ($errors->has('designation'))
-                    <div class="invalid-feedback">{{ $errors->first('designation') }}</div>
+                    <label for="title">Description</label>
+                    <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" id="description" placeholder="Write Your Designation"
+                        name="description"></textarea>
+                    @if ($errors->has('description'))
+                    <div class="invalid-feedback">{{ $errors->first('description') }}</div>
                     @endif
                 </div>
             </div>
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
-                    <label for="title">Message</label>
-                    <textarea class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}" id="message" placeholder="Write Your message"
-                        name="message"></textarea>
-                    @if ($errors->has('message'))
-                    <div class="invalid-feedback">{{ $errors->first('message') }}</div>
+                    <label for="title">Model</label>
+                    <textarea class="form-control {{ $errors->has('model') ? 'is-invalid' : '' }}" id="model" placeholder="Write Your model"
+                        name="model"></textarea>
+                    @if ($errors->has('model'))
+                    <div class="invalid-feedback">{{ $errors->first('model') }}</div>
+                    @endif
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="title">Category</label>
+                    <textarea class="form-control {{ $errors->has('category') ? 'is-invalid' : '' }}" id="category" placeholder="Write Your category"
+                              name="category"></textarea>
+                    @if ($errors->has('category'))
+                        <div class="invalid-feedback">{{ $errors->first('category') }}</div>
+                    @endif
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="title">Stock</label>
+                    <textarea class="form-control {{ $errors->has('stock') ? 'is-invalid' : '' }}" id="stock" placeholder="Write Your stock"
+                              name="stock"></textarea>
+                    @if ($errors->has('stock'))
+                        <div class="invalid-feedback">{{ $errors->first('stock') }}</div>
+                    @endif
+                </div>
+                <div class="form-group">
+                    <label for="title">Status</label>
+                    <textarea class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" id="status" placeholder="Write Your status"
+                              name="status"></textarea>
+                    @if ($errors->has('status'))
+                        <div class="invalid-feedback">{{ $errors->first('status') }}</div>
                     @endif
                 </div>
             </div>

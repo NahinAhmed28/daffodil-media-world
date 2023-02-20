@@ -24,33 +24,66 @@
 
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
-                            <label class="form-control-label"><span class="text-danger">*</span> Name </label>
-                            <textarea class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" id="name" placeholder="" rows="3" name="name" cols="50">{{
-                                old('name', $product->name) }}</textarea>
-                            @if ($errors->has('name'))
-                            <div class="invalid-feedback">{{ $errors->first('name') }}</div>
+                            <label class="form-control-label"><span class="text-danger">*</span> Title </label>
+                            <textarea class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" id="title" placeholder="" rows="3" name="title" cols="50">{{
+                                old('title', $product->title) }}</textarea>
+                            @if ($errors->has('title'))
+                            <div class="invalid-feedback">{{ $errors->first('title') }}</div>
                             @endif
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
-                            <label class="form-control-label"><span class="text-danger">*</span> Designation </label>
-                            <textarea class="form-control {{ $errors->has('designation') ? 'is-invalid' : '' }}" id="designation" placeholder="" rows="3" name="designation"
-                                cols="50">{{ old('designation', $product->designation)
+                            <label class="form-control-label"><span class="text-danger">*</span> Description </label>
+                            <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" id="description" placeholder="" rows="3" name="description"
+                                cols="50">{{ old('description', $product->description)
                                 }}</textarea>
-                            @if ($errors->has('designation'))
-                            <div class="invalid-feedback">{{ $errors->first('designation') }}</div>
+                            @if ($errors->has('description'))
+                            <div class="invalid-feedback">{{ $errors->first('description') }}</div>
                             @endif
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
-                            <label class="form-control-label"><span class="text-danger">*</span> Designation </label>
-                            <textarea class="form-control {{ $errors->has('message') ? 'is-invalid' : '' }}" id="message" placeholder="" rows="3" name="message"
-                                cols="50">{{ old('message', $product->message)
+                            <label class="form-control-label"><span class="text-danger">*</span> Model </label>
+                            <textarea class="form-control {{ $errors->has('model') ? 'is-invalid' : '' }}" id="model" placeholder="" rows="3" name="model"
+                                cols="50">{{ old('model', $product->model)
                                 }}</textarea>
-                            @if ($errors->has('message'))
-                            <div class="invalid-feedback">{{ $errors->first('message') }}</div>
+                            @if ($errors->has('model'))
+                            <div class="invalid-feedback">{{ $errors->first('model') }}</div>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="form-group  m-form__group">
+                            <label class="form-control-label"><span class="text-danger">*</span> Category </label>
+                            <textarea class="form-control {{ $errors->has('category') ? 'is-invalid' : '' }}" id="category" placeholder="" rows="3" name="category"
+                                      cols="50">{{ old('category', $product->category)
+                                }}</textarea>
+                            @if ($errors->has('category'))
+                                <div class="invalid-feedback">{{ $errors->first('category') }}</div>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="form-group  m-form__group">
+                            <label class="form-control-label"><span class="text-danger">*</span> Stock </label>
+                            <textarea class="form-control {{ $errors->has('stock') ? 'is-invalid' : '' }}" id="stock" placeholder="" rows="3" name="stock"
+                                      cols="50">{{ old('stock', $product->stock)
+                                }}</textarea>
+                            @if ($errors->has('stock'))
+                                <div class="invalid-feedback">{{ $errors->first('stock') }}</div>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="form-group  m-form__group">
+                            <label class="form-control-label"><span class="text-danger">*</span> Status </label>
+                            <textarea class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" id="status" placeholder="" rows="3" name="status"
+                                      cols="50">{{ old('status', $product->status)
+                                }}</textarea>
+                            @if ($errors->has('status'))
+                                <div class="invalid-feedback">{{ $errors->first('status') }}</div>
                             @endif
                         </div>
                     </div>
