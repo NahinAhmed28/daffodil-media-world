@@ -9,20 +9,20 @@
         <nav id="navbar" class="navbar">
 
             <ul>
-                <li><a class="nav-link scrollto active" href="{{route('public')}}">Home</a></li>
+                <li><a class="nav-link scrollto active" href="{{route('front')}}">Home</a></li>
 
-                <li><a class="nav-link scrollto" href="{{route('public.service')}}">Services</a></li>
+                <li><a class="nav-link scrollto" href="{{route('front.service')}}">Services</a></li>
                 <li class="dropdown"><a href="#"><span>Approach</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="{{route('public.about')}}">About</a></li>
-                        <li><a href="{{route('public.mission')}}">Mission And Vision</a></li>
-                        <li><a href="{{route('public.expertise')}}">Expertise</a></li>
+                        <li><a href="{{route('front.about')}}">About</a></li>
+                        <li><a href="{{route('front.mission')}}">Mission And Vision</a></li>
+                        <li><a href="{{route('front.expertise')}}">Expertise</a></li>
                     </ul>
                 </li>
 
-                <li><a class="nav-link scrollto" href="{{route('public.organization')}}">Organization</a></li>
-                <li><a class="nav-link scrollto" href="{{route('public.gallery')}}">Gallery</a></li>
-                <li><a class="nav-link scrollto" href="{{route('public.contact')}}">Contact</a></li>
+                <li><a class="nav-link scrollto" href="{{route('front.organization')}}">Organization</a></li>
+                <li><a class="nav-link scrollto" href="{{route('front.gallery')}}">Gallery</a></li>
+                <li><a class="nav-link scrollto" href="{{route('front.contact')}}">Contact</a></li>
                 @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                         @auth
