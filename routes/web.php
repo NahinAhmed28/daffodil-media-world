@@ -13,6 +13,7 @@ use App\Http\Controllers\HeroController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TimelineController;
 
 
 use Illuminate\Support\Facades\Artisan;
@@ -50,6 +51,7 @@ Route::resource('hero', HeroController::class);
 Route::resource('plan', PlanController::class);
 Route::resource('member', MemberController::class);
 Route::resource('product', ProductController::class);
+Route::resource('timeline', TimelineController::class);
 });
 
 Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name('front');
