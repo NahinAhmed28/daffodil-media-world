@@ -62,10 +62,12 @@ class ProductController extends Controller
 
 //        dd($request->all());
         $product = Product::create([
-            'name' => $request->name,
-            'designation' => $request->designation,
-            'message' => $request->message,
-            'image' => $imageFileName,
+            'title' => $request->title,
+            'description' => $request->description,
+            'model' => $request->model,
+            'category' => $request->category,
+            'stock' => $request->stock,
+            'status' => $request->status,
         ]);
 
 
@@ -129,9 +131,12 @@ class ProductController extends Controller
         }
 
         $product->update([
-            'name' => $request->name,
-            'designation' => $request->designation,
-            'message' => $request->message,
+            'name' => $request->title,
+            'description' => $request->description,
+            'model' => $request->model,
+            'category' => $request->category,
+            'stock' => $request->stock,
+            'status' => $request->status,
             'image' => $productImageFileName,
 
         ]);
