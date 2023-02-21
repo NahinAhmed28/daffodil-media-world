@@ -9,9 +9,9 @@
         <nav id="navbar" class="navbar">
 
             <ul>
-                <li><a class="nav-link scrollto active" href="{{route('front')}}">Home</a></li>
+                <li><a class="nav-link scrollto {{ request()->routeIs('front.front*') ? 'active' : '' }}" href="{{route('front')}}">Home</a></li>
 
-                <li><a class="nav-link scrollto" href="{{route('front.service')}}">Services</a></li>
+                <li><a class="nav-link scrollto {{ request()->routeIs('front.service*') ? 'active' : '' }}" href="{{route('front.service')}}">Services</a></li>
                 <li class="dropdown"><a href="#"><span>Approach</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="{{route('front.about')}}">About</a></li>
@@ -20,10 +20,10 @@
                     </ul>
                 </li>
 
-                <li><a class="nav-link scrollto" href="{{route('front.product')}}">Products</a></li>
-                <li><a class="nav-link scrollto" href="{{route('front.organization')}}">Organization</a></li>
-                <li><a class="nav-link scrollto" href="{{route('front.gallery')}}">Gallery</a></li>
-                <li><a class="nav-link scrollto" href="{{route('front.contact')}}">Contact</a></li>
+                <li><a class="nav-link scrollto {{ request()->routeIs('front.product*') ? 'active' : '' }}" href="{{route('front.product')}}">Products</a></li>
+                <li><a class="nav-link scrollto {{ request()->routeIs('front.organization*') ? 'active' : '' }}" href="{{route('front.organization')}}">Organization</a></li>
+                <li><a class="nav-link scrollto {{ request()->routeIs('front.gallery*') ? 'active' : '' }}" href="{{route('front.gallery')}}">Gallery</a></li>
+                <li><a class="nav-link scrollto {{ request()->routeIs('front.contact*') ? 'active' : '' }}" href="{{route('front.contact')}}">Contact</a></li>
                 @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                         @auth

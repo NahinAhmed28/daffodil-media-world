@@ -11,7 +11,7 @@
 
             <a href="{{ route('product.create') }}">
                 <button class="btn btn-primary" href>
-                    Create New Member
+                    Create New Product
                 </button>
             </a>
         </div>

@@ -42,9 +42,13 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'designation' => 'required',
-            'message' => 'required',
+
+            'title' =>'required',
+            'description' => 'required',
+            'model' => 'required',
+            'category' => 'required',
+            'stock' => 'required',
+            'status' => 'required',
         ]);
 
 
@@ -68,6 +72,7 @@ class ProductController extends Controller
             'category' => $request->category,
             'stock' => $request->stock,
             'status' => $request->status,
+            'image' => $imageFileName,
         ]);
 
 
