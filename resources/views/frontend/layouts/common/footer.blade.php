@@ -12,11 +12,10 @@
                            Executive Business Development <br>
                         </p>
                         <div class="social-links mt-3">
-                            <a href="https://www.facebook.com/ctidu" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="https://www.du.ac.bd/research_center_profile/317" class="twitter" target="_blank"><img src="{{asset('frontend/assets/img/logo_footer.png')}}" alt="" style="height: 95%!important;" class="img-fluid" ></a>
-{{--                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>--}}
-{{--                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>--}}
-{{--                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>--}}
+                            <a href="#" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
