@@ -18,7 +18,7 @@
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Our</h2>
-                    <p>Services</p>
+                    <p>Products</p>
                 </div>
                 <div class="row">
                     @foreach ($products as $product)
