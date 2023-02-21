@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Contact;
+use App\Models\Expert;
 use App\Models\Expertise;
 use App\Models\Gallery;
 use App\Models\Hero;
@@ -30,12 +31,13 @@ class FrontEndController extends Controller
             'mission' => Mission::first(),
             'vision' => Vision::first(),
             'plan' => Plan::first(),
-            'hero' => Hero::first(),
+            'heroes' => Hero::get(),
             'expertises' => Expertise::get(),
             'members' => Member::get(),
+            'experts' => Expert::get(),
             'galleries' => Gallery::orderBy('id', 'DESC')->take(6)->get(),
             'locations' => [
-                [ 12.9716,  77.5946],
+                [23.735708,  90.392929],
             ]
 
         ];
@@ -127,5 +129,6 @@ class FrontEndController extends Controller
         Alert::success('Message Submitted', 'You Message has been sent successfully');
         return redirect()->back();
     }
+
 
 }

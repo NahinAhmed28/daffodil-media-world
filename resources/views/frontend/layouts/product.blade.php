@@ -26,14 +26,14 @@
 
             <div class="row">
 
-                @foreach ($members as $member)
+                @foreach ($products as $product)
                 <div class="col-lg-4 col-md-6">
-                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                        <div class="pic"><img src="{{ asset('assets/uploads/member/'. $member->image) }}"
+                    <div class="product" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pic"><img src="{{ asset('assets/uploads/product/'. $product->image) }}"
                                 class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>{{$member->name}}</h4>
-                            <span>{{$member->designation}}</span>
+                        <div class="product-info">
+                            <h4>{{$product->name}}</h4>
+                            <span>{{$product->designation}}</span>
                             <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
                                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -49,24 +49,6 @@
         </div>
     </section><!-- End Team Section -->
 
-    <!-- ======= Clients Section ======= -->
-    <section id="organization" class="clients">
-        <div class="container" data-aos="zoom-in">
-            <div class="section-title">
-                <h2>Partners</h2>
-            </div>
-            <div class="row">
-
-                @foreach($organizations as $organization)
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="{{ asset('assets/uploads/organization/'.$organization->image)}}" class="img-fluid" alt="">
-                </div>
-                @endforeach
-
-            </div>
-
-        </div>
-    </section><!-- End Clients Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
@@ -74,16 +56,16 @@
 
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                 <div class="swiper-wrapper">
-                    @foreach ($members as $member)
+                    @foreach ($products as $product)
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{ asset('assets/uploads/member/'. $member->image) }}" class="testimonial-img"
+                            <img src="{{ asset('assets/uploads/product/'. $product->image) }}" class="testimonial-img"
                                 alt="">
-                            <h3>{{$member->name}}</h3>
-                            <h4>{{$member->designation}}</h4>
+                            <h3>{{$product->name}}</h3>
+                            <h4>{{$product->description}}</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                {{$member->message}}
+                                {{$product->model}}
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                         </div>

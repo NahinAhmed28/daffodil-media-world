@@ -20,6 +20,7 @@
                     </ul>
                 </li>
 
+                <li><a class="nav-link scrollto" href="{{route('front.product')}}">Products</a></li>
                 <li><a class="nav-link scrollto" href="{{route('front.organization')}}">Organization</a></li>
                 <li><a class="nav-link scrollto" href="{{route('front.gallery')}}">Gallery</a></li>
                 <li><a class="nav-link scrollto" href="{{route('front.contact')}}">Contact</a></li>
