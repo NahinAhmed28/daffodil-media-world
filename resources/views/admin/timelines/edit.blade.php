@@ -5,15 +5,7 @@
 <div class="main-card mb-3 card">
     <div class="card-body table-full-width table-responsive">
 
-        <div class="button-list-flex">
-            <h4> Timeline Details Edit</h4>
 
-            <a href="{{ route('timeline.index') }}">
-                <button class="btn btn-primary" href>
-                    Timeline List
-                </button>
-            </a>
-        </div>
 
         <!--begin::Form-->
         <form action="{{route('timeline.update', $timeline->id)}}" method="post" enctype="multipart/form-data">
@@ -24,93 +16,48 @@
 
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
-                            <label class="form-control-label"><span class="text-danger">*</span> Title </label>
-                            <textarea class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" id="title" placeholder="" rows="3" name="title" cols="50">{{
-                                old('title', $timeline->title) }}</textarea>
-                            @if ($errors->has('title'))
-                            <div class="invalid-feedback">{{ $errors->first('title') }}</div>
+                            <label class="form-control-label"><span class="text-danger">*</span> Client </label>
+                            <textarea class="form-control {{ $errors->has('clients') ? 'is-invalid' : '' }}" id="clients" placeholder="" rows="3" name="clients" cols="50">{{
+                                old('clients', $timeline->clients) }}</textarea>
+                            @if ($errors->has('clients'))
+                            <div class="invalid-feedback">{{ $errors->first('clients') }}</div>
                             @endif
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
-                            <label class="form-control-label"><span class="text-danger">*</span> Description </label>
-                            <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" id="description" placeholder="" rows="3" name="description"
-                                cols="50">{{ old('description', $timeline->description)
+                            <label class="form-control-label"><span class="text-danger">*</span> Projects </label>
+                            <textarea class="form-control {{ $errors->has('projects') ? 'is-invalid' : '' }}" id="projects" placeholder="" rows="3" name="projects"
+                                cols="50">{{ old('projects', $timeline->projects)
                                 }}</textarea>
-                            @if ($errors->has('description'))
-                            <div class="invalid-feedback">{{ $errors->first('description') }}</div>
+                            @if ($errors->has('projects'))
+                            <div class="invalid-feedback">{{ $errors->first('projects') }}</div>
                             @endif
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
-                            <label class="form-control-label"><span class="text-danger">*</span> Model </label>
-                            <textarea class="form-control {{ $errors->has('model') ? 'is-invalid' : '' }}" id="model" placeholder="" rows="3" name="model"
-                                cols="50">{{ old('model', $timeline->model)
+                            <label class="form-control-label"><span class="text-danger">*</span> Experience </label>
+                            <textarea class="form-control {{ $errors->has('experience') ? 'is-invalid' : '' }}" id="experience" placeholder="" rows="3" name="experience"
+                                cols="50">{{ old('experience', $timeline->experience)
                                 }}</textarea>
-                            @if ($errors->has('model'))
-                            <div class="invalid-feedback">{{ $errors->first('model') }}</div>
+                            @if ($errors->has('experience'))
+                            <div class="invalid-feedback">{{ $errors->first('experience') }}</div>
                             @endif
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
-                            <label class="form-control-label"><span class="text-danger">*</span> Category </label>
-                            <textarea class="form-control {{ $errors->has('category') ? 'is-invalid' : '' }}" id="category" placeholder="" rows="3" name="category"
-                                      cols="50">{{ old('category', $timeline->category)
+                            <label class="form-control-label"><span class="text-danger">*</span> Awards </label>
+                            <textarea class="form-control {{ $errors->has('awards') ? 'is-invalid' : '' }}" id="awards" placeholder="" rows="3" name="awards"
+                                      cols="50">{{ old('awards', $timeline->awards)
                                 }}</textarea>
-                            @if ($errors->has('category'))
-                                <div class="invalid-feedback">{{ $errors->first('category') }}</div>
-                            @endif
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="form-group  m-form__group">
-                            <label class="form-control-label"><span class="text-danger">*</span> Stock </label>
-                            <textarea class="form-control {{ $errors->has('stock') ? 'is-invalid' : '' }}" id="stock" placeholder="" rows="3" name="stock"
-                                      cols="50">{{ old('stock', $timeline->stock)
-                                }}</textarea>
-                            @if ($errors->has('stock'))
-                                <div class="invalid-feedback">{{ $errors->first('stock') }}</div>
-                            @endif
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="form-group  m-form__group">
-                            <label class="form-control-label"><span class="text-danger">*</span> Status </label>
-                            <textarea class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" id="status" placeholder="" rows="3" name="status"
-                                      cols="50">{{ old('status', $timeline->status)
-                                }}</textarea>
-                            @if ($errors->has('status'))
-                                <div class="invalid-feedback">{{ $errors->first('status') }}</div>
+                            @if ($errors->has('awards'))
+                                <div class="invalid-feedback">{{ $errors->first('awards') }}</div>
                             @endif
                         </div>
                     </div>
 
-
-                    {{-- timeline image area --}}
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="form-group">
-                            <div class="service-flex">
-                                <label class="form-control-label">Timeline Image</label>
-                                <img class="img-thumbnail" src="{{ asset('assets/uploads/timeline/'.$timeline->image)}}"
-                                    width="200px">
-                            </div>
-                            <div class="custom-file">
-                                <input type="file" name="image"
-                                    class="custom-file-input form-control {{ $errors->has('image') ? 'is-invalid' : '' }}"
-                                    id="PartnersImageFile" />
-                                <label class="custom-file-label" for="PartnersImageFile">Choose file</label>
-                                @if ($errors->has('image'))
-                                <div class="invalid-feedback">{{ $errors->first('image') }}</div>
-                                @endif
-
-                            </div>
-                            <div id="emailHelp" class="form-text text-info">Recommended image shape:(600x600) px </div>
-                            <img class="mt-4" style="display: none" src="#" id="image_tag" width="200px" />
-                        </div>
-                    </div>
                     <div class="m-portlet__foot m-portlet__foot--fit">
                         <div class="m-form__actions text-center flexbox">
                             <a href="{{ route('timeline.index') }}" class="btn btn-danger btn-flex"><i

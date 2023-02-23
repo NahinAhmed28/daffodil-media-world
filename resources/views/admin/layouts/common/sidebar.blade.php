@@ -257,7 +257,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('timeline.edit')}}">
+                            <a href="{{route('timeline.index')}}">
                                 <i class="metismenu-icon">
                                 </i>Info Details
                             </a>

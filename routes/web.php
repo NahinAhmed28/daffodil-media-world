@@ -53,7 +53,7 @@ Route::resource('plan', PlanController::class);
 Route::resource('member', MemberController::class);
 Route::resource('product', ProductController::class);
 Route::resource('timeline', TimelineController::class);
-    Route::resource('expert', ExpertController::class);
+Route::resource('expert', ExpertController::class);
 });
 
 Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name('front');

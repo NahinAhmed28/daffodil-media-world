@@ -17,10 +17,12 @@ class TimelineController extends Controller
      */
     public function index()
     {
-//        $data = [
-//            'timelines' => Timeline::get()->toQuery()->paginate(5),
-//        ];
-//        return view('admin.timelines.index', $data);
+
+        $data = [
+            'timeline' => Timeline::first(),
+        ];
+
+        return view('admin.timelines.edit', $data);
     }
 
     /**

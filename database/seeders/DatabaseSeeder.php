@@ -188,6 +188,14 @@ Technology.<o:p></o:p></span></span></p>',
             'created_at'=>	now(),
             'updated_at'=>now(),
         ]);
+        DB::table('timelines')->insert([
+            'clients' => 10,
+            'projects' =>   10,
+            'experience' =>  10,
+            'awards' =>  10,
+            'created_at'=>	now(),
+            'updated_at'=>now(),
+        ]);
 
     }
 }
