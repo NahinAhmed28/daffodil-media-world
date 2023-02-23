@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Intervention\Image\Facades\Image;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\About;
 use Illuminate\Http\Request;
@@ -78,12 +79,33 @@ class AboutController extends Controller
 
         $request->validate([
             'description' => 'required',
-            'video' => 'required',
+            'image' => 'required',
+
         ]);
+
+        $aboutImageFileName = $about->image;
+        if ($request->hasFile('image')) {
+            $aboutImage = $request->file('image');
+            $aboutImageFileName = 'about' . time() . '.' . $aboutImage->getClientOriginalExtension();
+
+
+            if (!file_exists('assets/uploads/about')) {
+                mkdir('assets/uploads/about', 0777, true);
+            }
+
+            //delete old image if exist
+
+
+            if (file_exists('assets/uploads/about/' . $about->image) and $about->image != 'default.png') {
+                unlink('assets/uploads/about/' . $about->image);
+            }
+            $aboutImage->move('assets/uploads/about', $aboutImageFileName);
+            Image::make('assets/uploads/about/' . $aboutImageFileName)->resize(600, 400)->save('assets/uploads/about/' . $aboutImageFileName);
+        }
 
          $about->update([
             'description' => $request->description,
-            'video' => $request->video,
+            'image' => $aboutImageFileName,
         ]);
 
         $data = [

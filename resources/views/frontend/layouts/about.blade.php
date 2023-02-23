@@ -51,18 +51,17 @@
                                     <p>Awards</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
 
-                <div class="col-lg-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-md-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
                     <img src="{{ asset('frontend/assets/img/about.jpg') }}" class="img-fluid" alt="">
-                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
+{{--                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>--}}
                 </div>
 
-                <div class="col-lg-6 pt-3 pt-lg-0 content">
+                <div class="col-md-6 pt-3 pt-lg-0 content">
                     <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
                     <p class="fst-italic">
                         {!!$about->description!!}

@@ -23,13 +23,26 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-12">
-                        <div class="form-group {{ $errors->has('video') ? 'has-danger' : '' }}">
-                            <label><span class="text-danger">*</span>Youtube Video Url</label>
-                            <input  type="text" class="form-control m-input {{ $errors->has('video') ? 'is-invalid' : '' }}" name="video" value="{{ old('video', $about->video) }}" placeholder="Youtube Url"/>
-                            @if ($errors->has('video'))
-                                <div class="invalid-feedback">{{ $errors->first('video') }}</div>
-                            @endif
+                    {{-- about image area --}}
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="form-group">
+                            <div class="about-flex">
+                                <label class="form-control-label">About Image</label>
+                                <img class="img-thumbnail" src="{{ asset('assets/uploads/about/'.$about->image)}}"
+                                     width="200px">
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" name="image"
+                                       class="custom-file-input form-control {{ $errors->has('image') ? 'is-invalid' : '' }}"
+                                       id="PartnersImageFile" />
+                                <label class="custom-file-label" for="PartnersImageFile">Choose file</label>
+                                @if ($errors->has('image'))
+                                    <div class="invalid-feedback">{{ $errors->first('image') }}</div>
+                                @endif
+
+                            </div>
+                            <div id="emailHelp" class="form-text text-info">Recommended image shape:(600x400) px </div>
+                            <img class="mt-4" src="#" id="image_tag" width="200px" />
                         </div>
                     </div>
 
@@ -49,3 +62,23 @@
 </div>
 
 @endsection
+
+@push('scripts')
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#image_tag').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#PartnersImageFile").change(function(){
+            readURL(this);
+        });
+    </script>
+
+@endpush

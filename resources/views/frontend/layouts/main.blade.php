@@ -19,16 +19,11 @@
 
                 <div class="row">
 
-                    <div class="col-lg-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
-
-                        <iframe style="width: 100%; min-height: 300px"  src="https://www.youtube.com/embed/{{getOwnYoutubeIdForEmbed($about->video)}}"
-                                {{--                            style="height:700px;width:1280px;"--}}
-                                title="YouTube video player" allowfullscreen></iframe>
-                        {{--                    <img src="{{ asset('frontend/assets/img/about.jpg') }}" class="img-fluid" alt="">--}}
+                    <div class="col-md-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="{{ asset('frontend/assets/img/about.jpg') }}" class="img-fluid" alt="">
                         {{--                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>--}}
                     </div>
-
-                    <div class="col-lg-6 pt-3 pt-lg-0 content">
+                    <div class="col-md-6 pt-3 pt-lg-0 content">
                         <h3>About Us</h3>
                         <p class="fst-italic">
                             {!!$about->description!!}
