@@ -15,13 +15,10 @@ return new class extends Migration
     {
         Schema::create('timelines', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('description');
-            $table->string('image');
-            $table->string('model');
-            $table->string('category');
-            $table->string('stock');
-            $table->tinyInteger('status')->default('1');
+            $table->tinyInteger('clients');
+            $table->tinyInteger('projects');
+            $table->tinyInteger('experience');
+            $table->tinyInteger('awards');
             $table->timestamps();
         });
     }

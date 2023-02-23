@@ -242,6 +242,29 @@
                     </ul>
                 </li>
 
+                {{--Timeline--}}
+                <li>
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-users"></i>
+                        Timeline information
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="{{route('timeline.edit')}}">
+                                <i class="metismenu-icon">
+                                </i>Add Info Details (if not added previously)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('timeline.edit')}}">
+                                <i class="metismenu-icon">
+                                </i>Info Details
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 {{--Members--}}
                 <li>
                     <a href="#">

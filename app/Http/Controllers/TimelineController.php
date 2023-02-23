@@ -17,10 +17,10 @@ class TimelineController extends Controller
      */
     public function index()
     {
-        $data = [
-            'timelines' => Timeline::get()->toQuery()->paginate(5),
-        ];
-        return view('admin.timelines.index', $data);
+//        $data = [
+//            'timelines' => Timeline::get()->toQuery()->paginate(5),
+//        ];
+//        return view('admin.timelines.index', $data);
     }
 
     /**
@@ -42,32 +42,20 @@ class TimelineController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'designation' => 'required',
-            'message' => 'required',
+            'clients' => 'required',
+            'projects' => 'required',
+            'experience' => 'required',
+            'awards' =>'required',
         ]);
 
 
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageFileName = 'timeline' . time() . '.' . $image->getClientOriginalExtension();
-            if (!file_exists('assets/uploads/timeline')) {
-                mkdir('assets/uploads/timeline', 0777, true);
-            }
-            $image->move('assets/uploads/timeline', $imageFileName);
-            Image::make('assets/uploads/timeline/'.$imageFileName)->resize(600,600)->save('assets/uploads/timeline/'.$imageFileName);
-        } else {
-            $imageFileName = 'default_logo.png';
-        }
-
 //        dd($request->all());
+
         $timeline = Timeline::create([
-            'title' => $request->title,
-            'description' => $request->description,
-            'model' => $request->model,
-            'category' => $request->category,
-            'stock' => $request->stock,
-            'status' => $request->status,
+            'clients' => $request->clients,
+            'projects' => $request->projects,
+            'experience' => $request->experience,
+            'awards' => $request->awards,
         ]);
 
 
@@ -110,35 +98,12 @@ class TimelineController extends Controller
      */
     public function update(Request $request, Timeline $timeline)
     {
-        $timelineImageFileName = $timeline->image;
-        if ($request->hasFile('image')){
-            $timelineImage = $request->file('image');
-            $timelineImageFileName = 'timeline'.time() . '.' . $timelineImage->getClientOriginalExtension();
-
-
-            if (!file_exists('assets/uploads/timeline')){
-                mkdir('assets/uploads/timeline', 0777, true);
-            }
-
-            //delete old image if exist
-
-
-            if (file_exists('assets/uploads/timeline/'.$timeline->image) and $timeline->image != 'default.png'){
-                unlink('assets/uploads/timeline/'.$timeline->image);
-            }
-            $timelineImage->move('assets/uploads/timeline', $timelineImageFileName);
-            Image::make('assets/uploads/timeline/'.$timelineImageFileName)->resize(600,600)->save('assets/uploads/timeline/'.$timelineImageFileName);
-        }
 
         $timeline->update([
-            'name' => $request->title,
-            'description' => $request->description,
-            'model' => $request->model,
-            'category' => $request->category,
-            'stock' => $request->stock,
-            'status' => $request->status,
-            'image' => $timelineImageFileName,
-
+            'clients' => $request->clients,
+            'projects' => $request->projects,
+            'experience' => $request->experience,
+            'awards' => $request->awards,
         ]);
         Alert::success('Timeline info Updated', 'Timeline Info Updated Successfully');
         return Redirect::back();

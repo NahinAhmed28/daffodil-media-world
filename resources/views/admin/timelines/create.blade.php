@@ -6,22 +6,22 @@
     <div class="m-3" style="margin-bottom: 20px">
 
         <div class="button-list-flex">
-            <h4>Create Product</h4>
+            <h4>Create Timeline</h4>
 
-            <a href="{{ route('product.index') }}">
+            <a href="{{ route('timeline.index') }}">
                 <button class="btn btn-primary" href>
-                    Product List
+                    Timeline List
                 </button>
             </a>
         </div>
 
 
-        <form action="{{route('product.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('timeline.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
-                    <label for="title">Product Title</label>
+                    <label for="title">Timeline Title</label>
                     <input type="text" name="title"
                         class="form-control md-2 {{ $errors->has('title') ? 'is-invalid' : '' }}"
                         value="{{ old('title') }}" placeholder="Write Your Title" />
@@ -32,7 +32,7 @@
             </div>
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
-                    <label>Product Image</label>
+                    <label>Timeline Image</label>
                     <div class="custom-file">
                         <input type="file" name="image"
                             class="custom-file-input form-control {{ $errors->has('image') ? 'is-invalid' : '' }}"
