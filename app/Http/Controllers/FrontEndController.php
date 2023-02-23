@@ -13,6 +13,7 @@ use App\Models\Organization;
 use App\Models\Plan;
 use App\Models\Product;
 use App\Models\Service;
+use App\Models\Timeline;
 use App\Models\Vision;
 use App\Models\Member;
 
@@ -26,6 +27,7 @@ class FrontEndController extends Controller
     {
         $data = [
             'about' => About::first(),
+            'timeline' => Timeline::first(),
             'organizations' => Organization::get(['image']),
             'services' => Service::get(),
             'mission' => Mission::first(),
@@ -51,6 +53,7 @@ class FrontEndController extends Controller
             'mission' => Mission::first(),
             'vision' => Vision::first(),
             'plan' => Plan::first(),
+            'timeline' => Timeline::first(),
         ];
 
         return view('frontend.layouts.about', $data);
