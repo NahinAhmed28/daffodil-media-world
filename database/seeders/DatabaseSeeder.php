@@ -101,7 +101,7 @@ Battalion, Ministry of Labor and Employment and Ministry of Information
 Technology.<o:p></o:p></span></span></p>',
             'created_at'=>	now(),
             'updated_at'=> now(),
-            'video'=> 'https://www.youtube.com/watch?v=T7BMndEDYLc',
+            'image'=> 'default.jpg',
         ]);
 
         DB::table('products')->insert([

@@ -44,6 +44,7 @@ class FrontEndController extends Controller
 
         ];
 
+
         return view('frontend.layouts.main', $data);
     }
     public function about()
