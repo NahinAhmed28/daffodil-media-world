@@ -161,57 +161,12 @@
             </div>
         </section><!-- End Services Boxes Section -->
 
-        <!-- ======= Portfolio Section ======= -->
-        <section id="gallery" class="portfolio">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Portfolio</h2>
-                    <p>Check our Portfolio</p>
-                </div>
-
-
-
-
-            </div>
-        </section><!-- End Portfolio Section -->
-
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials">
-            <div class="container" data-aos="zoom-in">
-
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper">
-
-                        @foreach ($experts as $expert)
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <img src="{{ asset('assets/uploads/expert/'. $expert->image) }}" class="testimonial-img"
-                                         alt="">
-                                    <h3>{{$expert->name}}</h3>
-                                    <h4>{!! $expert->designation !!}</h4>
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        {{$expert->message}}
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                </div>
-                            </div><!-- End testimonial item -->
-                        @endforeach
-
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div>
-        </section><!-- End Testimonials Section -->
-
         <!-- ======= Gallery Section ======= -->
         <section id="gallery" class="portfolio">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Portfolio</h2>
+                    <h2>Gallery</h2>
                     <p>Check our Gallery</p>
                 </div>
 
