@@ -13,7 +13,7 @@
     <!-- Start #main -->
     <main id="main">
 
-        <!-- ======= About Boxes Section ======= -->
+        <!-- ======= Product Section ======= -->
         <section id="about-boxes" class="about-boxes">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
@@ -60,7 +60,7 @@
                 </div>
 
             </div>
-        </section><!-- End About Boxes Section -->
+        </section><!-- End Product Section -->
     </main><!-- End #main -->
 
     @push('scripts')

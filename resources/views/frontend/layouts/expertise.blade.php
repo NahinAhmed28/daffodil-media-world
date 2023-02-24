@@ -14,8 +14,8 @@
 <main id="main">
 
 
-    <!-- ======= Features Section ======= -->
-    <section id="portfolio" class="features">
+    <!-- ======= Expertises Section ======= -->
+    <section id="about-boxes" class="about-boxes">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
                 <h2>Expertises</h2>
@@ -31,7 +31,7 @@
                                 <img src="{{ asset('assets/uploads/expertise/'.$expertise->image)}}" class="img-fluid" alt="">
                                 <div class="portfolio-info">
                                     <h4 class="text-center font-weight-bold">{{$expertise->title}}</h4>
-                                    <p class="card-text px-2">{!!$expertise->description!!}</p>
+                                    <p class="card-text px-2">{!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>
                                 </div>
                             </a>
                         </div>
@@ -39,7 +39,7 @@
                 </ul>
             </div>
         </div>
-    </section><!-- End Features Section -->
+    </section><!-- End Expertises Section -->
 
 
 </main><!-- End #main -->

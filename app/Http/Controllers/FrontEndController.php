@@ -38,6 +38,7 @@ class FrontEndController extends Controller
             'members' => Member::get(),
             'experts' => Expert::get(),
             'galleries' => Gallery::orderBy('id', 'DESC')->take(6)->get(),
+            'products' => Product::orderBy('id', 'DESC')->take(6)->get(),
             'locations' => [
                 [23.735708,  90.392929],
             ]

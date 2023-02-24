@@ -27,12 +27,23 @@
                     <div class="col-lg-6">
                         <div class="row">
                             <div class="col-12">
-                                <div class="info-box">
-                                    <i class="bx bx-map"></i>
-                                    <h3>Our Address</h3>
-                                    <p class="pb-2">Room: 9050-52, 8th Floor, MBA Building <br>
-                                        Faculty of Business Studies <br>
-                                        <strong>University of Dhaka</strong>  </p>
+                                <div class="info-box row">
+                                    <div class="col-md-6">
+                                        <i class="bx bx-map"></i>
+                                        <h3>Our Address</h3>
+                                        <p class="pb-2">Room: 9050-52, 8th Floor, MBA Building <br>
+                                            Faculty of Business Studies <br>
+                                            <strong>University of Dhaka</strong>  </p>
+                                    </div>
+                                    <div class="col-md-6 ">
+                                        <div class="social-links mt-4">
+                                            <a href="#" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                            <a href="#" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>  <br>
+                                            <a href="#" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                            <a href="#" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

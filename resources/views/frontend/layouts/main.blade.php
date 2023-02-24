@@ -141,34 +141,31 @@
         </section><!-- End Clients and Organization Section -->
 
         <!-- ======= Expertises Section ======= -->
-
         <section id="about-boxes" class="about-boxes">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
-                    <h2>Our</h2>
-                    <p>Expertises</p>
+                    <h2>Expertises</h2>
+                    <p>Check our Expertises</p>
                 </div>
-                <div class="row">
-                    @foreach ($expertises as $expertise)
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card">
-                                <img src="{{ asset('assets/uploads/expertise/'.$expertise->image)}}" class="card-img-top"
-                                     alt="...">
-                                <div class="card-icon">
-                                    <i class="ri-brush-4-line"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="">{!!$expertise->title!!}</a></h5>
-                                    <p class="card-text">{!!$expertise->description!!}</p>
-                                </div>
+                <div class="tab-content">
+                    <ul class="nav nav-tabs row d-flex ">
+                        @foreach ($expertises as $expertise)
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                <a href="{{ asset('assets/uploads/expertise/'.$expertise->image) }}"
+                                   data-gallery="expertiseGallery" class="portfolio-lightbox preview-link "
+                                   title="{{$expertise->title}}">
+                                    <img src="{{ asset('assets/uploads/expertise/'.$expertise->image)}}" class="img-fluid" alt="">
+                                    <div class="portfolio-info">
+                                        <h4 class="text-center font-weight-bold">{{$expertise->title}}</h4>
+                                        <p class="card-text px-2">{!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>
+                                    </div>
+                                </a>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </ul>
                 </div>
-
             </div>
         </section><!-- End Expertises Section -->
-
 
         <!-- ======= Services Boxes Section ======= -->
         <section id="about-boxes" class="about-boxes">
@@ -179,36 +176,80 @@
                 </div>
                 <div class="row">
                     @foreach ($services as $service)
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                            <div class="card">
-                                <img src="{{ asset('assets/uploads/service/'.$service->image)}}" class="card-img-top"
-                                     alt="...">
-                                <div class="card-icon">
-                                    <i class="ri-brush-4-line"></i>
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <a href="{{ asset('assets/uploads/service/'.$service->image) }}"
+                               data-gallery="serviceGallery" class="portfolio-lightbox preview-link "
+                               title="{{$service->description}}">
+                                <img src="{{ asset('assets/uploads/service/'.$service->image)}}" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4 class="text-center font-weight-bold">{{$service->title}}</h4>
+                                    <p class="card-text px-2">{!! Str::limit(strip_tags($service->description), 100) !!} ...</p>
                                 </div>
-                                <div class="card-body">
-                                    <h5 class="card-title"><a href="">{!!$service->title!!}</a></h5>
-                                    <p class="card-text">{!!$service->description!!}</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     @endforeach
                 </div>
 
             </div>
-        </section><!-- End Services Boxes Section -->
+        </section><!-- End About Boxes Section -->
+
+        <!-- ======= Product Section ======= -->
+        <section id="about-boxes" class="about-boxes">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Our</h2>
+                    <p>Products</p>
+                </div>
+                <div class="row">
+                    @foreach ($products as $product)
+                        {{--                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">--}}
+                        {{--                            <div class="card">--}}
+                        {{--                                <img src="{{ asset('assets/uploads/product/'.$product->image)}}" class="card-img-top"--}}
+                        {{--                                     alt="...">--}}
+                        {{--                                <div class="card-icon">--}}
+                        {{--                                    <i class="ri-brush-4-line"></i>--}}
+                        {{--                                </div>--}}
+                        {{--                                <div class="card-body">--}}
+                        {{--                                    <h5 class="card-title"><a href="">{!!$product->title!!}</a></h5>--}}
+                        {{--                                    <p class="card-text">{!!$product->description!!}</p>--}}
+                        {{--                                    <p class="card-text"><strong>Model:</strong>  {!!$product->model!!}</p>--}}
+                        {{--                                    <p class="card-text"><strong>Category:</strong> {!!$product->category!!}</p>--}}
+                        {{--                                    <p class="card-text"><strong>Stock:</strong> {!!$product->stock!!}</p>--}}
+                        {{--                                </div>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
+
+
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <a href="{{ asset('assets/uploads/product/'.$product->image) }}"
+                               data-gallery="productGallery" class="portfolio-lightbox preview-link ">
+                                <img src="{{ asset('assets/uploads/product/'.$product->image)}}" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+
+                                    <h4 class="text-center font-weight-bold">{{$product->title}}</h4>
+
+                                    <p class="card-text px-2">{!!$product->description!!}</p>
+                                    <p class="card-text"><strong>Model:</strong>  {!!$product->model!!}</p>
+                                    <p class="card-text"><strong>Category:</strong> {!!$product->category!!}</p>
+                                    <p class="card-text"><strong>Stock:</strong> {!!$product->stock!!}</p>
+
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+
+            </div>
+        </section><!-- End Product Section -->
 
         <!-- ======= Gallery Section ======= -->
         <section id="gallery" class="portfolio">
             <div class="container" data-aos="fade-up">
-
                 <div class="section-title">
                     <h2>Gallery</h2>
                     <p>Check our Gallery</p>
                 </div>
-
-
-
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
                     @foreach($galleries as $gallery)
                         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
@@ -224,9 +265,9 @@
                         </div>
                     @endforeach
                 </div>
-
             </div>
         </section><!-- End Gallery Section -->
+
 
         <!-- ======= Team Section ======= -->
         <section id="team" class="team section-bg">
@@ -246,27 +287,17 @@
                                                       class="img-fluid" alt=""></div>
                                 <div class="member-info">
                                     <h4>{{$member->name}}</h4>
-                                    <span>{!! $member->designation !!}</span>
+                                    <span>{{$member->designation}}</span>
                                     <div class="social">
-                                        {{--                                <a href=""><i class="bi bi-twitter"></i></a>--}}
-                                        {{--                                <a href=""><i class="bi bi-facebook"></i></a>--}}
-                                        {{--                                <a href=""><i class="bi bi-instagram"></i></a>--}}
-                                        {{--                                <a href=""><i class="bi bi-linkedin"></i></a>--}}
-
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <a href="{{ asset('assets/uploads/member/'.$member->image) }}"
-                                           data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{$member->message}}">More
-                                            {{--                                    <i class="bx bx-zoom-in"></i>--}}
-                                        </a>
-                                        {{--                            <a href="portfolio-details.html" class="details-link" title="More Details"><i--}}
-                                        {{--                                    class="bx bx-link"></i></a>--}}
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
-
                 </div>
 
             </div>
@@ -285,12 +316,23 @@
                     <div class="col-lg-6">
                         <div class="row">
                             <div class="col-12">
-                                <div class="info-box">
-                                    <i class="bx bx-map"></i>
-                                    <h3>Our Address</h3>
-                                    <p class="pb-2">Room: 9050-52, 8th Floor, MBA Building <br>
-                                        Faculty of Business Studies <br>
-                                        <strong>University of Dhaka</strong>  </p>
+                                <div class="info-box row">
+                                    <div class="col-md-6">
+                                        <i class="bx bx-map"></i>
+                                        <h3>Our Address</h3>
+                                        <p class="pb-2">Room: 9050-52, 8th Floor, MBA Building <br>
+                                            Faculty of Business Studies <br>
+                                            <strong>University of Dhaka</strong>  </p>
+                                    </div>
+                                    <div class="col-md-6 ">
+                                        <div class="social-links mt-4">
+                                            <a href="#" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                            <a href="#" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>  <br>
+                                            <a href="#" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                            <a href="#" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
