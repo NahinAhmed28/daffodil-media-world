@@ -203,33 +203,18 @@
                 </div>
                 <div class="row">
                     @foreach ($products as $product)
-                        {{--                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">--}}
-                        {{--                            <div class="card">--}}
-                        {{--                                <img src="{{ asset('assets/uploads/product/'.$product->image)}}" class="card-img-top"--}}
-                        {{--                                     alt="...">--}}
-                        {{--                                <div class="card-icon">--}}
-                        {{--                                    <i class="ri-brush-4-line"></i>--}}
-                        {{--                                </div>--}}
-                        {{--                                <div class="card-body">--}}
-                        {{--                                    <h5 class="card-title"><a href="">{!!$product->title!!}</a></h5>--}}
-                        {{--                                    <p class="card-text">{!!$product->description!!}</p>--}}
-                        {{--                                    <p class="card-text"><strong>Model:</strong>  {!!$product->model!!}</p>--}}
-                        {{--                                    <p class="card-text"><strong>Category:</strong> {!!$product->category!!}</p>--}}
-                        {{--                                    <p class="card-text"><strong>Stock:</strong> {!!$product->stock!!}</p>--}}
-                        {{--                                </div>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
-
 
                         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                             <a href="{{ asset('assets/uploads/product/'.$product->image) }}"
-                               data-gallery="productGallery" class="portfolio-lightbox preview-link ">
+                               data-gallery="productGallery" class="portfolio-lightbox preview-link "
+                               title="{{$product->description}}">
                                 <img src="{{ asset('assets/uploads/product/'.$product->image)}}" class="img-fluid" alt="">
+                                <p class="card-text px-2">{!! $product->description !!} ...</p>
                                 <div class="portfolio-info">
 
                                     <h4 class="text-center font-weight-bold">{{$product->title}}</h4>
 
-                                    <p class="card-text px-2">{!!$product->description!!}</p>
+                                    <p class="card-text px-2">{!! Str::limit(strip_tags($product->description), 100) !!} ...</p>
                                     <p class="card-text"><strong>Model:</strong>  {!!$product->model!!}</p>
                                     <p class="card-text"><strong>Category:</strong> {!!$product->category!!}</p>
                                     <p class="card-text"><strong>Stock:</strong> {!!$product->stock!!}</p>
@@ -252,9 +237,9 @@
                 </div>
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
                     @foreach($galleries as $gallery)
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app ">
                             <img src="{{ asset('assets/uploads/gallery/'.$gallery->image)}}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
+                            <div class="portfolio-info ">
                                 <h4>{{$gallery->category}}</h4>
                                 <a href="{{ asset('assets/uploads/gallery/'.$gallery->image) }}"
                                    data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{$gallery->category}}"><i
