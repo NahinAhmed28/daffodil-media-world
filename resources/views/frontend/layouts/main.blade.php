@@ -18,7 +18,44 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="row">
+                    <div class="row justify-content-end">
+                        <div class="col-lg-11">
+                            <div class="row justify-content-end">
 
+                                <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                                    <div class="count-box">
+                                        <i class="bi bi-emoji-smile"></i>
+                                        <span data-purecounter-start="0" data-purecounter-end="{{$timeline->clients}}" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p>Happy Clients</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                                    <div class="count-box">
+                                        <i class="bi bi-journal-richtext"></i>
+                                        <span data-purecounter-start="0" data-purecounter-end="{{$timeline->projects}}" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p>Projects</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                                    <div class="count-box">
+                                        <i class="bi bi-clock"></i>
+                                        <span data-purecounter-start="0" data-purecounter-end="{{$timeline->experience}}" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p>Years of experience</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                                    <div class="count-box">
+                                        <i class="bi bi-award"></i>
+                                        <span data-purecounter-start="0" data-purecounter-end="{{$timeline->awards}}" data-purecounter-duration="1" class="purecounter"></span>
+                                        <p>Awards</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
 
 
