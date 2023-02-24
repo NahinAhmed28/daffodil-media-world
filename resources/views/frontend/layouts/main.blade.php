@@ -22,11 +22,11 @@
                     <div class="col-lg-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
 
 
-                                            <img src="{{ asset('frontend/assets/img/about.jpg') }}" class="img-fluid" alt="">
+                                            <img src="{{ asset('assets/uploads/about/'.$about->image)}}" class="img-fluid mt-5" alt="">
                         {{--                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>--}}
                     </div>
 
-                    <div class="col-lg-6 pt-3 pt-lg-0 content">
+                    <div class="col-lg-6 mt-5 pt-3 pt-lg-0 content">
                         <h3>About Us</h3>
                         <p class="fst-italic">
                             {!!$about->description!!}

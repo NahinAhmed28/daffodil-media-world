@@ -79,7 +79,6 @@ class AboutController extends Controller
 
         $request->validate([
             'description' => 'required',
-            'image' => 'required',
 
         ]);
 
