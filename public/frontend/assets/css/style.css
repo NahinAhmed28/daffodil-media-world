@@ -134,7 +134,7 @@ h6 {
 
 #header.header-scrolled,
 #header.header-inner-pages {
-  background: rgba(255, 255, 255, 0.78);
+  background: rgb(255, 255, 255);
   padding: 10px 0;
 }
 
@@ -795,7 +795,7 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.79);
   z-index: 9;
 }
 

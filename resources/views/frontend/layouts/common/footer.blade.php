@@ -35,11 +35,11 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>Daffodil Media</span></strong>. All Rights Reserved
+            &copy; Copyright <strong>Daffodil Media</strong>. All Rights Reserved
         </div>
 
         <div class="float-right">
-          created by Nahin Ahmed
+            created by <a href="https://www.linkedin.com/in/ahmed-nur-a-jalal-b025341a5/" target="_blank">Nahin Ahmed</a>
         </div>
     </div>
 </footer>
