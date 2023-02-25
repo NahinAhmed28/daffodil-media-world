@@ -38,7 +38,7 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong>Daffodil Media</strong>. All Rights Reserved
+            &copy; Copyright <strong>Daffodil Medi World</strong>. All Rights Reserved
         </div>
 
         <div class="float-right">

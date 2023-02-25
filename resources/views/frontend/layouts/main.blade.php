@@ -60,7 +60,8 @@
 
 
                                             <img src="{{ asset('assets/uploads/about/'.$about->image)}}" class="img-fluid mt-5" alt="">
-                        {{--                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>--}}
+                                            <a href="https://www.youtube.com/watch?v=miOD55GGEWA" class="glightbox play-btn mb-4"></a>
+
                     </div>
 
                     <div class="col-lg-6 mt-5 pt-3 pt-lg-0 content">
