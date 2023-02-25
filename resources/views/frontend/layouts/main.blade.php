@@ -305,18 +305,24 @@
                             <div class="col-12">
                                 <div class="info-box row">
                                     <div class="col-md-6">
-                                        <i class="bx bx-map"></i>
-                                        <h3>Our Address</h3>
-                                        <p class="pb-2">Room: 9050-52, 8th Floor, MBA Building <br>
-                                            Faculty of Business Studies <br>
-                                            <strong>University of Dhaka</strong>  </p>
+                                        <i class="bx bx-map text-danger"></i>
+                                        <h3 class="text-danger">Our Address</h3>
+                                        <p class="pb-2">House # 326, Flat #A-4 (1st Floor)<br>
+                                            Ahmed Nagar (Opposite of Chinese Res.) <br>
+                                           Mirpur-1, Dhaka-1216 <br>
+
+                                        </p>
                                     </div>
                                     <div class="col-md-6 ">
-                                        <div class="social-links mt-4">
-                                            <a href="#" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-                                            <a href="#" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>  <br>
-                                            <a href="#" target="_blank" class="google-plus"><i class="bx bxl-skype"></i></a>
-                                            <a href="#" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                        <div class="social-links mt-4 ">
+                                            <a href="https://www.facebook.com/Daffodilmediworld/" target="_blank" class="facebook" ><i class="bx bxl-facebook-circle" style="color: #3f8af8"></i></a>
+                                            <a href="https://www.linkedin.com/company/daffodilmediworld/" target="_blank" class="linkedin" ><i class="bx bxl-linkedin-square" style="color: #0a53be"></i></a>
+                                        </div>
+                                        <div class="col-md-6 text-left">
+                                            <p class="pb-2" style="font-size: 12px">
+                                                <strong>E-Mail:</strong> daffodilmediworld.bd@gmail.com <br>
+                                                <strong> Whatsapp:<br> </strong> +880 1754-816222 <br>
+                                            </p>
                                         </div>
                                     </div>
 
@@ -379,14 +385,14 @@
             function initMap() {
                 const map = new google.maps.Map(document.getElementById("map"), {
                     zoom: 18,
-                    center: {  lat: 23.735708, lng: 90.392929 },
+                    center: {  lat: 23.794606320003115, lng: 90.3556018284282},
                 });
 
                 marker = new google.maps.Marker({
                     map,
                     draggable: true,
                     animation: google.maps.Animation.DROP,
-                    position: {  lat: 23.735708, lng: 90.392929 },
+                    position: {  lat: 23.794606320003115, lng: 90.3556018284282},
                 });
                 marker.addListener("click", toggleBounce);
             }

@@ -40,7 +40,7 @@ class FrontEndController extends Controller
             'galleries' => Gallery::orderBy('id', 'DESC')->take(6)->get(),
             'products' => Product::orderBy('id', 'DESC')->take(6)->get(),
             'locations' => [
-                [23.735708,  90.392929],
+                [23.794606320003115,  90.3556018284282],
             ]
 
         ];

@@ -54,7 +54,7 @@ class OrganizationController extends Controller
                 mkdir('assets/uploads/organization', 0777, true);
             }
             $image->move('assets/uploads/organization', $imageFileName);
-            Image::make('assets/uploads/organization/' . $imageFileName)->resize(400, 400)->save('assets/uploads/organization/' . $imageFileName);
+            Image::make('assets/uploads/organization/' . $imageFileName)->resize(600, 600)->save('assets/uploads/organization/' . $imageFileName);
         } else {
             $imageFileName = 'default_logo.png';
         }
