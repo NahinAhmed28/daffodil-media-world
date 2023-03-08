@@ -79,9 +79,10 @@
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
                             <label class="form-control-label"><span class="text-danger">*</span> Status </label>
-                            <textarea class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" id="status" placeholder="" rows="3" name="status"
-                                      cols="50">{{ old('status', $product->status)
-                                }}</textarea>
+                            <select class="form-control m-input  name="status">
+                                <option value="1" {{ $product->status == 1  ? 'selected' : '' }}>Adult</option>
+                                <option value="0" {{ $product->status == 0  ? 'selected' : '' }}>Child</option>
+                            </select>
                             @if ($errors->has('status'))
                                 <div class="invalid-feedback">{{ $errors->first('status') }}</div>
                             @endif

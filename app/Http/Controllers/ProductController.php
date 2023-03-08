@@ -71,7 +71,7 @@ class ProductController extends Controller
             'model' => $request->model,
             'category' => $request->category,
             'stock' => $request->stock,
-            'status' => $request->status,
+            'status' => 1,
             'image' => $imageFileName,
         ]);
 

@@ -86,14 +86,7 @@
                         <div class="invalid-feedback">{{ $errors->first('stock') }}</div>
                     @endif
                 </div>
-                <div class="form-group">
-                    <label for="title">Status</label>
-                    <textarea class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" id="status" placeholder="Write Your status"
-                              name="status"></textarea>
-                    @if ($errors->has('status'))
-                        <div class="invalid-feedback">{{ $errors->first('status') }}</div>
-                    @endif
-                </div>
+
             </div>
             <div class="col-sm-12 col-md-6">
                 <button class="btn btn-success mt-2" type="submit">Submit Info</button>
