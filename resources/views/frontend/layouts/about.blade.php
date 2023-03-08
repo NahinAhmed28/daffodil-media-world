@@ -63,7 +63,6 @@
                                         <a href="https://www.youtube.com/watch?v=miOD55GGEWA" class="glightbox play-btn mb-4"></a>
                 </div>
                 <div class="col-md-6 pt-3 pt-lg-0 content">
-                    <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
                     <p class="fst-italic">
                         {!!$about->description!!}
                     </p>
