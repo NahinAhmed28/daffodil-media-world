@@ -67,10 +67,25 @@
                     </div>
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
+                            <label class="form-control-label"><span class="text-danger">*</span> Filter Name</label>
+                            <select class="form-control" data-live-search="true" name="filter_id" id="filter_id">
+                                <option value="">---Select Filter ---</option>
+                                @foreach($filters as $filter)
+                                    <option value="{{$filter->id}}"
+                                        {{$product->filter_id == $filter->id  ? 'selected' : ''}}>{{$filter->name}}</option>
+                                @endforeach
+                            </select>
+                            @if ($errors->has('filter_id'))
+                                <div class="invalid-feedback">{{ $errors->first('filter_id') }}</div>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="form-group  m-form__group">
                             <label class="form-control-label"><span class="text-danger">*</span> Stock </label>
-                            <textarea class="form-control {{ $errors->has('stock') ? 'is-invalid' : '' }}" id="stock" placeholder="" rows="3" name="stock"
-                                      cols="50">{{ old('stock', $product->stock)
-                                }}</textarea>
+
+                            <input type="number" class="form-control {{ $errors->has('stock') ? 'is-invalid' : '' }}"
+                                   name="stock" id="stock" placeholder="stock" value="{{ old('stock', $product->stock) }}" />
                             @if ($errors->has('stock'))
                                 <div class="invalid-feedback">{{ $errors->first('stock') }}</div>
                             @endif
@@ -79,9 +94,9 @@
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
                             <label class="form-control-label"><span class="text-danger">*</span> Status </label>
-                            <select class="form-control m-input  name="status">
-                                <option value="1" {{ $product->status == 1  ? 'selected' : '' }}>Adult</option>
-                                <option value="0" {{ $product->status == 0  ? 'selected' : '' }}>Child</option>
+                            <select class="form-control m-input"  name="status">
+                                <option value="1" {{ $product->status == 1  ? 'selected' : '' }}>Active</option>
+                                <option value="0" {{ $product->status == 0  ? 'selected' : '' }}>Inactive</option>
                             </select>
                             @if ($errors->has('status'))
                                 <div class="invalid-feedback">{{ $errors->first('status') }}</div>

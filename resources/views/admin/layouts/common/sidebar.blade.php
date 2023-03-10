@@ -223,7 +223,7 @@
                 <li>
                     <a href="#">
                         <i class="metismenu-icon pe-7s-users"></i>
-                        Organization Products
+                        Products
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
@@ -241,6 +241,30 @@
                         </li>
                     </ul>
                 </li>
+
+                {{--Filters--}}
+                <li>
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-users"></i>
+                        Product Filters
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="{{route('filter.create')}}">
+                                <i class="metismenu-icon">
+                                </i>Create
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{route('filter.index')}}">
+                                <i class="metismenu-icon">
+                                </i>List
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
 
                 {{--Timeline--}}
                 <li>

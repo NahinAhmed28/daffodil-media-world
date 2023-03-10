@@ -79,9 +79,25 @@
             </div>
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
+                    <label for="title">Filter Name</label>
+                    <select class="form-control m-bootstrap-select m_selectpicker" name="filter_id" data-live-search="true">
+                        <option value="">---- Select ----</option>
+                        @foreach($filters as $filter)
+                            <option value="{{$filter->id}}"
+                                {{$filter->id == old('filter_id') ? 'selected' : ''}}>{{$filter->name}}</option>
+                        @endforeach
+                    </select>
+                    @if ($errors->has('filter_id'))
+                        <div class="invalid-feedback">{{ $errors->first('filter_id') }}</div>
+                    @endif
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
                     <label for="title">Stock</label>
-                    <textarea class="form-control {{ $errors->has('stock') ? 'is-invalid' : '' }}" id="stock" placeholder="Write Your stock"
-                              name="stock"></textarea>
+                    <input type="number" class="form-control {{ $errors->has('stock') ? 'is-invalid' : '' }}"
+                           id="stock" placeholder="Write Your stock" name="stock"/>
                     @if ($errors->has('stock'))
                         <div class="invalid-feedback">{{ $errors->first('stock') }}</div>
                     @endif

@@ -104,8 +104,13 @@ Technology.<o:p></o:p></span></span></p>',
             'image'=> 'default.jpg',
         ]);
 
+
+        DB::table('filters')->insert([
+            'title' => 'name',
+        ]);
         DB::table('products')->insert([
             'title' => 'title',
+            'filter_id' => 1,
             'description' => 'description description description description',
             'model' => 'default MODEL' ,
             'category' => 'default CATEGORY' ,

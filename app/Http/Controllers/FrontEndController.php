@@ -38,7 +38,7 @@ class FrontEndController extends Controller
             'members' => Member::get(),
             'experts' => Expert::get(),
             'galleries' => Gallery::orderBy('id', 'DESC')->take(6)->get(),
-            'products' => Product::orderBy('id', 'DESC')->take(6)->get(),
+            'products' => Product::orderBy('id', 'DESC')->where('status',1)->take(6)->get(),
             'locations' => [
                 [23.794606320003115,  90.3556018284282],
             ]
@@ -71,7 +71,7 @@ class FrontEndController extends Controller
     public function product()
     {
         $data = [
-            'products' => Product::get(),
+            'products' => Product::orderBy('id', 'DESC')->where('status',1)->get(),
         ];
         return view('frontend.layouts.product', $data);
     }

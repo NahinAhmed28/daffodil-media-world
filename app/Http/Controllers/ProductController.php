@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Filter;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -30,7 +31,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        $data = [
+            'filters' => Filter::get(),
+        ];
+        return view('admin.products.create',$data);
     }
 
     /**
@@ -41,6 +45,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+
+//        dd($request->all());
         $request->validate([
 
             'title' =>'required',
@@ -48,7 +54,8 @@ class ProductController extends Controller
             'model' => 'required',
             'category' => 'required',
             'stock' => 'required',
-            'status' => 'required',
+            'filter_id' => 'required',
+
         ]);
 
 
@@ -71,6 +78,7 @@ class ProductController extends Controller
             'model' => $request->model,
             'category' => $request->category,
             'stock' => $request->stock,
+            'filter_id' => $request->filter_id,
             'status' => 1,
             'image' => $imageFileName,
         ]);
@@ -102,8 +110,13 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $product = Product::find($id);
-        return view('admin.products.edit', compact('product'));
+        $data = [
+            'product' => Product::find($id),
+            'filters' => Filter::get(),
+        ];
+
+
+        return view('admin.products.edit', $data);
     }
 
     /**
@@ -142,6 +155,7 @@ class ProductController extends Controller
             'category' => $request->category,
             'stock' => $request->stock,
             'status' => $request->status,
+            'filter_id' => $request->filter_id,
             'image' => $productImageFileName,
 
         ]);

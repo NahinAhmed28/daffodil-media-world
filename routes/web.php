@@ -15,6 +15,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TimelineController;
 use App\Http\Controllers\ExpertController;
+use App\Http\Controllers\FilterController;
 
 
 use Illuminate\Support\Facades\Artisan;
@@ -54,6 +55,7 @@ Route::resource('member', MemberController::class);
 Route::resource('product', ProductController::class);
 Route::resource('timeline', TimelineController::class);
 Route::resource('expert', ExpertController::class);
+Route::resource('filter', FilterController::class);
 });
 
 Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name('front');

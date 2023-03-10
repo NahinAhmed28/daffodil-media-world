@@ -4,15 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Product extends Model
+class Filter extends Model
 {
     protected $guarded = ['id'];
 
     use HasFactory;
 
-    public function filter(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function products():HasMany
     {
-        return $this->belongsTo(Filter::class);
+        return $this->hasMany(Product::class);
     }
 }
