@@ -70,6 +70,7 @@ Route::group(['prefix'=>'front','as'=>'front.'], function(){
     Route::get('/morgue', [App\Http\Controllers\FrontEndController::class, 'morgue'])->name('morgue');
     Route::get('/hematology', [App\Http\Controllers\FrontEndController::class, 'hematology'])->name('hematology');
     Route::get('/immunology', [App\Http\Controllers\FrontEndController::class, 'immunology'])->name('immunology');
+    Route::get('/product/searchProduct/', [App\Http\Controllers\FrontEndController::class, 'searchProduct'])->name('searchProduct');
     Route::get('/expertise', [App\Http\Controllers\FrontEndController::class, 'expertise'])->name('expertise');
     Route::get('/mission', [App\Http\Controllers\FrontEndController::class, 'mission'])->name('mission');
     Route::get('/contact', [App\Http\Controllers\FrontEndController::class, 'contact'])->name('contact');

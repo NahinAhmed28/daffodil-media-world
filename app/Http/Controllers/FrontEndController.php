@@ -67,6 +67,17 @@ class FrontEndController extends Controller
         ];
         return view('frontend.layouts.service', $data);
     }
+
+    public function searchProduct(Request $request){
+
+        $search = $request->input('search');
+
+        $data = [
+            'products' => Product::orderBy('id', 'DESC')->where('status',1)->where('title', 'LIKE', "%{$search}%")->get(),
+        ];
+        return view('frontend.layouts.product', $data);
+    }
+
     public function product()
     {
         $data = [

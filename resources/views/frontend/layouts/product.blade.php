@@ -16,9 +16,28 @@
         <section id="about-boxes" class="about-boxes" style="background: white!important;">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
-                    <h2>Our</h2>
-                    <p>Products</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Our</h2>
+                            <p>Products</p></div>
+                        <div class="col-md-6 text-end">
+                            <div class="input-group">
+                              @if( request()->is('front/product*'))
+                                    <form action="{{ route('front.searchProduct') }}" method="GET">
+                                        <input type="text" class="border border-4 border-success rounded"
+                                               placeholder="Search Products" name="search" aria-label="search" required/>
+                                        <button type="submit" class="btn btn-outline-primary">Search</button>
+                                    </form>
+                              @else()
+                              @endif
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+
                 <div class="row ">
                     @foreach ($products as $product)
 
