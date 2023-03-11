@@ -20,7 +20,19 @@
                     </ul>
                 </li>
 
-                <li><a class="nav-link scrollto {{ request()->routeIs('front.product*') ? 'active' : '' }}" href="{{route('front.product')}}">Products</a></li>
+                <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="{{route('front.histopathology')}}">Histopathology</a></li>
+                        <li><a href="{{route('front.microbiology')}}">Microbiology</a></li>
+                        <li><a href="{{route('front.immuno')}}">Immuno-Histo Chemistry</a></li>
+                        <li><a href="{{route('front.bio')}}">Bio-Chemistry</a></li>
+                        <li><a href="{{route('front.morgue')}}">Morgue Refrigerator	</a></li>
+                        <li><a href="{{route('front.hematology')}}">Hematology</a></li>
+                        <li><a href="{{route('front.immunology')}}">Immunology</a></li>
+                        <li><a href="{{route('front.product')}}">All Products</a></li>
+                    </ul>
+                </li>
+
                 <li><a class="nav-link scrollto {{ request()->routeIs('front.organization*') ? 'active' : '' }}" href="{{route('front.organization')}}">Organization</a></li>
                 <li><a class="nav-link scrollto {{ request()->routeIs('front.gallery*') ? 'active' : '' }}" href="{{route('front.gallery')}}">Gallery</a></li>
                 <li><a class="nav-link scrollto {{ request()->routeIs('front.contact*') ? 'active' : '' }}" href="{{route('front.contact')}}">Contact</a></li>

@@ -249,6 +249,8 @@
                             </div>
                         </div>
                     @endforeach
+                        <a class="btn btn-outline-warning  text-center mt-5"  target="_blank" href="{{route('front.gallery')}}"><b>View MORE on Gallery</b></a>
+
                 </div>
             </div>
         </section><!-- End Gallery Section -->
@@ -270,10 +272,7 @@
                                     <h4>{{$member->name}}</h4>
                                     <span>{!! $member->designation !!}</span>
                                     <div class="social">
-                                        {{--                                <a href=""><i class="bi bi-twitter"></i></a>--}}
-                                        {{--                                <a href=""><i class="bi bi-facebook"></i></a>--}}
-                                        {{--                                <a href=""><i class="bi bi-instagram"></i></a>--}}
-                                        {{--                                <a href=""><i class="bi bi-linkedin"></i></a>--}}
+
 
                                     </div>
                                     <div class="portfolio-info">

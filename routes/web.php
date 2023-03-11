@@ -63,6 +63,13 @@ Route::group(['prefix'=>'front','as'=>'front.'], function(){
     Route::get('/about', [App\Http\Controllers\FrontEndController::class, 'about'])->name('about');
     Route::get('/service', [App\Http\Controllers\FrontEndController::class, 'service'])->name('service');
     Route::get('/product', [App\Http\Controllers\FrontEndController::class, 'product'])->name('product');
+    Route::get('/histopathology', [App\Http\Controllers\FrontEndController::class, 'histopathology'])->name('histopathology');
+    Route::get('/microbiology', [App\Http\Controllers\FrontEndController::class, 'microbiology'])->name('microbiology');
+    Route::get('/immuno', [App\Http\Controllers\FrontEndController::class, 'immuno'])->name('immuno');
+    Route::get('/bio', [App\Http\Controllers\FrontEndController::class, 'bio'])->name('bio');
+    Route::get('/morgue', [App\Http\Controllers\FrontEndController::class, 'morgue'])->name('morgue');
+    Route::get('/hematology', [App\Http\Controllers\FrontEndController::class, 'hematology'])->name('hematology');
+    Route::get('/immunology', [App\Http\Controllers\FrontEndController::class, 'immunology'])->name('immunology');
     Route::get('/expertise', [App\Http\Controllers\FrontEndController::class, 'expertise'])->name('expertise');
     Route::get('/mission', [App\Http\Controllers\FrontEndController::class, 'mission'])->name('mission');
     Route::get('/contact', [App\Http\Controllers\FrontEndController::class, 'contact'])->name('contact');

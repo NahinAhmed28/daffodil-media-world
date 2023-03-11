@@ -67,7 +67,6 @@ class FrontEndController extends Controller
         ];
         return view('frontend.layouts.service', $data);
     }
-
     public function product()
     {
         $data = [
@@ -75,6 +74,57 @@ class FrontEndController extends Controller
         ];
         return view('frontend.layouts.product', $data);
     }
+    public function histopathology()
+    {
+        $data = [
+            'products' => Product::orderBy('id', 'DESC')->where('status',1)->where('filter_id',1)->get(),
+        ];
+        return view('frontend.layouts.product', $data);
+    }
+    public function microbiology()
+    {
+        $data = [
+            'products' => Product::orderBy('id', 'DESC')->where('status',1)->where('filter_id',2)->get(),
+        ];
+        return view('frontend.layouts.product', $data);
+    }
+    public function immuno()
+    {
+        $data = [
+            'products' => Product::orderBy('id', 'DESC')->where('status',1)->where('filter_id',3)->get(),
+        ];
+        return view('frontend.layouts.product', $data);
+    }
+    public function bio()
+    {
+        $data = [
+            'products' => Product::orderBy('id', 'DESC')->where('status',1)->where('filter_id',4)->get(),
+        ];
+        return view('frontend.layouts.product', $data);
+    }
+    public function morgue()
+    {
+        $data = [
+            'products' => Product::orderBy('id', 'DESC')->where('status',1)->where('filter_id',5)->get(),
+        ];
+        return view('frontend.layouts.product', $data);
+    }
+    public function hematology()
+    {
+        $data = [
+            'products' => Product::orderBy('id', 'DESC')->where('status',1)->where('filter_id',6)->get(),
+        ];
+        return view('frontend.layouts.product', $data);
+    }
+    public function immunology()
+    {
+        $data = [
+            'products' => Product::orderBy('id', 'DESC')->where('status',1)->where('filter_id',7)->get(),
+        ];
+        return view('frontend.layouts.product', $data);
+    }
+
+
     public function expertise()
     {
         $data = [
