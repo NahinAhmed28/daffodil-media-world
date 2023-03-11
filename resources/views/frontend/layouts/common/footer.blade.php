@@ -5,9 +5,8 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-info">
-                        <h3>Engr. Md. Rafiqul Islam</h3>
+                        <a href="{{route('front')}}" class="logo"><img src="{{asset('frontend/assets/img/logo.png')}}" alt="" class="img-fluid"></a>
                         <p>
-                           CEO, Daffodil Medi World <br>
                             House # 326, Flat #A-4 (1St Floor) <br>
                             Ahmed Nagar (Opposite of Chinese Res.) <br>
                             Mirpur-1, Dhaka-1216 <br>

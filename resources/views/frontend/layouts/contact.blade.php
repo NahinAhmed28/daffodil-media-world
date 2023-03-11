@@ -31,11 +31,22 @@
                                     <div class="col-md-6">
                                         <i class="bx bx-map text-danger"></i>
                                         <h3 class="text-danger">Our Address</h3>
-                                        <p class="pb-2">House # 326, Flat #A-4 (1st Floor)<br>
+                                        <p class="pb-2 text-justify">
+                                            <strong class="text-success">Sales Office:</strong>
+                                            House # 326, Flat #A-4 (1st Floor)<br>
                                             Ahmed Nagar (Opposite of Chinese Res.) <br>
                                             Mirpur-1, Dhaka-1216 <br>
 
                                         </p>
+
+                                        <p  class="pb-2 text-justify">
+                                            <strong class="text-success">Corporate Office:</strong>  184/3, Galaxy Habul Tower, <br>
+                                            Ahmed Nagor, Paik Para, <br>
+                                            Mirpur-1, Dhaka-1216. <br>
+                                            Tel: +88 02 58051249
+
+                                        </p>
+
                                     </div>
                                     <div class="col-md-6 ">
                                         <div class="social-links mt-4 ">

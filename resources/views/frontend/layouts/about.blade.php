@@ -31,7 +31,16 @@
                             <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                                 <div class="count-box">
                                     <i class="bi bi-journal-richtext"></i>
-                                    <span data-purecounter-start="0" data-purecounter-end="{{$timeline->projects}}" data-purecounter-duration="1" class="purecounter"></span>
+                                    <div class="row">
+                                        <div class="col-md-6 text-left pr-0">
+                                            <span style="white-space: normal;" data-purecounter-start="0" data-purecounter-end="{{$timeline->projects}}" data-purecounter-duration="1" class="purecounter ml-0 "></span>
+                                        </div>
+                                        <div class="col-md-6 text-left pl-0">
+                                            <span class="ml-0 ">+</span>
+                                        </div>
+                                    </div>
+
+                                    </p>
                                     <p>Projects</p>
                                 </div>
                             </div>

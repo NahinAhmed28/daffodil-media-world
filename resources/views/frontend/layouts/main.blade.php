@@ -33,7 +33,16 @@
                                 <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                                     <div class="count-box">
                                         <i class="bi bi-journal-richtext"></i>
-                                        <span data-purecounter-start="0" data-purecounter-end="{{$timeline->projects}}" data-purecounter-duration="1" class="purecounter"></span>
+                                        <div class="row">
+                                            <div class="col-md-6 text-left pr-0">
+                                                <span style="white-space: normal;" data-purecounter-start="0" data-purecounter-end="{{$timeline->projects}}" data-purecounter-duration="1" class="purecounter ml-0 "></span>
+                                            </div>
+                                            <div class="col-md-6 text-left pl-0">
+                                                <span class="ml-0 ">+</span>
+                                            </div>
+                                        </div>
+
+                                        </p>
                                         <p>Projects</p>
                                     </div>
                                 </div>
@@ -306,11 +315,22 @@
                                     <div class="col-md-6">
                                         <i class="bx bx-map text-danger"></i>
                                         <h3 class="text-danger">Our Address</h3>
-                                        <p class="pb-2">House # 326, Flat #A-4 (1st Floor)<br>
+                                        <p class="pb-2 text-justify">
+                                            <strong class="text-success">Sales Office:</strong>
+                                            House # 326, Flat #A-4 (1st Floor)<br>
                                             Ahmed Nagar (Opposite of Chinese Res.) <br>
-                                           Mirpur-1, Dhaka-1216 <br>
+                                            Mirpur-1, Dhaka-1216 <br>
 
                                         </p>
+
+                                        <p  class="pb-2 text-justify">
+                                            <strong class="text-success">Corporate Office:</strong>  184/3, Galaxy Habul Tower, <br>
+                                            Ahmed Nagor, Paik Para, <br>
+                                            Mirpur-1, Dhaka-1216. <br>
+                                            Tel: +88 02 58051249
+
+                                        </p>
+
                                     </div>
                                     <div class="col-md-6 ">
                                         <div class="social-links mt-4 ">
