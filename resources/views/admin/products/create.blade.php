@@ -50,8 +50,8 @@
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                     <label for="title">Description</label>
-                    <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" id="description" placeholder="Write Your Designation"
-                        name="description"></textarea>
+                    <textarea class="form-control d-none summernote{{ $errors->has('description') ? 'is-invalid' : '' }}" id="description" placeholder="Write Your Designation"
+                              name="description"></textarea>
                     @if ($errors->has('description'))
                     <div class="invalid-feedback">{{ $errors->first('description') }}</div>
                     @endif
@@ -93,17 +93,17 @@
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-6">
-                <div class="form-group">
-                    <label for="title">Stock</label>
-                    <input type="number" class="form-control {{ $errors->has('stock') ? 'is-invalid' : '' }}"
-                           id="stock" placeholder="Write Your stock" name="stock"/>
-                    @if ($errors->has('stock'))
-                        <div class="invalid-feedback">{{ $errors->first('stock') }}</div>
-                    @endif
-                </div>
+{{--            <div class="col-sm-12 col-md-6">--}}
+{{--                <div class="form-group">--}}
+{{--                    <label for="title">Stock</label>--}}
+{{--                    <input type="number" class="form-control {{ $errors->has('stock') ? 'is-invalid' : '' }}"--}}
+{{--                           id="stock" placeholder="Write Your stock" name="stock"/>--}}
+{{--                    @if ($errors->has('stock'))--}}
+{{--                        <div class="invalid-feedback">{{ $errors->first('stock') }}</div>--}}
+{{--                    @endif--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            </div>
             <div class="col-sm-12 col-md-6">
                 <button class="btn btn-success mt-2" type="submit">Submit Info</button>
             </div>

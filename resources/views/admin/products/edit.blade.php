@@ -35,8 +35,8 @@
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
                             <label class="form-control-label"><span class="text-danger">*</span> Description </label>
-                            <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" id="description" placeholder="" rows="3" name="description"
-                                cols="50">{{ old('description', $product->description)
+                            <textarea class="form-control d-none summernote{{ $errors->has('description') ? 'is-invalid' : '' }}" id="description" placeholder="" rows="3" name="description"
+                                      cols="50">{{ old('description', $product->description)
                                 }}</textarea>
                             @if ($errors->has('description'))
                             <div class="invalid-feedback">{{ $errors->first('description') }}</div>
@@ -80,17 +80,17 @@
                             @endif
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="form-group  m-form__group">
-                            <label class="form-control-label"><span class="text-danger">*</span> Stock </label>
+{{--                    <div class="col-xs-12 col-sm-12">--}}
+{{--                        <div class="form-group  m-form__group">--}}
+{{--                            <label class="form-control-label"><span class="text-danger">*</span> Stock </label>--}}
 
-                            <input type="number" class="form-control {{ $errors->has('stock') ? 'is-invalid' : '' }}"
-                                   name="stock" id="stock" placeholder="stock" value="{{ old('stock', $product->stock) }}" />
-                            @if ($errors->has('stock'))
-                                <div class="invalid-feedback">{{ $errors->first('stock') }}</div>
-                            @endif
-                        </div>
-                    </div>
+{{--                            <input type="number" class="form-control {{ $errors->has('stock') ? 'is-invalid' : '' }}"--}}
+{{--                                   name="stock" id="stock" placeholder="stock" value="{{ old('stock', $product->stock) }}" />--}}
+{{--                            @if ($errors->has('stock'))--}}
+{{--                                <div class="invalid-feedback">{{ $errors->first('stock') }}</div>--}}
+{{--                            @endif--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                     <div class="col-xs-12 col-sm-12">
                         <div class="form-group  m-form__group">
                             <label class="form-control-label"><span class="text-danger">*</span> Status </label>

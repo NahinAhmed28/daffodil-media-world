@@ -53,7 +53,7 @@ class ProductController extends Controller
             'description' => 'required',
             'model' => 'required',
             'category' => 'required',
-            'stock' => 'required',
+//            'stock' => 'required',
             'filter_id' => 'required',
 
         ]);
@@ -77,7 +77,7 @@ class ProductController extends Controller
             'description' => $request->description,
             'model' => $request->model,
             'category' => $request->category,
-            'stock' => $request->stock,
+//            'stock' => $request->stock,
             'filter_id' => $request->filter_id,
             'status' => 1,
             'image' => $imageFileName,
@@ -153,7 +153,7 @@ class ProductController extends Controller
             'description' => $request->description,
             'model' => $request->model,
             'category' => $request->category,
-            'stock' => $request->stock,
+//            'stock' => $request->stock,
             'status' => $request->status,
             'filter_id' => $request->filter_id,
             'image' => $productImageFileName,

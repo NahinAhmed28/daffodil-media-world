@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('model');
             $table->string('category');
-            $table->string('stock');
+            $table->string('stock')->nullable();
             $table->tinyInteger('status')->default('1');
             $table->timestamps();
 
