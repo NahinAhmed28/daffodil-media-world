@@ -34,10 +34,10 @@
                                     <div class="count-box">
                                         <i class="bi bi-journal-richtext"></i>
                                         <div class="row">
-                                            <div class="col-md-6 text-left pr-0">
+                                            <div class="col-md-4 text-left pr-0">
                                                 <span style="white-space: normal;" data-purecounter-start="0" data-purecounter-end="{{$timeline->projects}}" data-purecounter-duration="1" class="purecounter ml-0 "></span>
                                             </div>
-                                            <div class="col-md-6 text-left pl-0">
+                                            <div class="col-md-8 text-left pl-0">
                                                 <span class="ml-0 ">+</span>
                                             </div>
                                         </div>
