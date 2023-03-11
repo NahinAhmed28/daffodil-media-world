@@ -31,7 +31,7 @@
                                     <div class="col-md-6">
                                         <i class="bx bx-map text-danger"></i>
                                         <h3 class="text-danger">Our Address</h3>
-                                        <p class="pb-2 text-justify">
+                                        <p class="pb-2 text-left">
                                             <strong class="text-success">Sales Office:</strong>
                                             House # 326, Flat #A-4 (1st Floor)<br>
                                             Ahmed Nagar (Opposite of Chinese Res.) <br>
@@ -39,7 +39,7 @@
 
                                         </p>
 
-                                        <p  class="pb-2 text-justify">
+                                        <p  class="pb-2 text-left">
                                             <strong class="text-success">Corporate Office:</strong>  184/3, Galaxy Habul Tower, <br>
                                             Ahmed Nagor, Paik Para, <br>
                                             Mirpur-1, Dhaka-1216. <br>
