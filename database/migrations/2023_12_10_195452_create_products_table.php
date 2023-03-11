@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('filter_id');
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('image');
             $table->string('model');
             $table->string('category');

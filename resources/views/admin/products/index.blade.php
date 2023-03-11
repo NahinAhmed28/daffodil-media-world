@@ -32,7 +32,7 @@
             <tbody>
                 @foreach($products as $product)
                 <tr>
-                    <td>{{$product->id}}</td>
+                    <td>{{ $loop->iteration }}</td>
                     <td>
                         <img class="img-thumbnail image-height"
                             src="{{ asset('assets/uploads/product/'.$product->image)}}">

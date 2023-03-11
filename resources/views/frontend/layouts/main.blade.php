@@ -193,42 +193,40 @@
                 </div>
 
             </div>
-        </section><!-- End About Boxes Section -->
+        </section><!-- End Services Boxes Section -->
 
-        <!-- ======= Product Section ======= -->
-        <section id="about-boxes" class="about-boxes">
-            <div class="container" data-aos="fade-up">
+        <!-- ======= Products Boxes Section ======= -->
+        <section id="about-boxes" class="about-boxes" style="background: white!important;">
+            <div class="container" data-aos="fade-up" >
                 <div class="section-title">
                     <h2>Our</h2>
                     <p>Products</p>
                 </div>
-                <div class="row">
+                <div class="row" >
                     @foreach ($products as $product)
 
                         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <a href="{{ asset('assets/uploads/product/'.$product->image) }}"
+                            <a href=""
                                data-gallery="productGallery" class="portfolio-lightbox preview-link "
                                title="{{$product->description}}">
                                 <img src="{{ asset('assets/uploads/product/'.$product->image)}}" class="img-fluid" alt="">
-                                <p class="card-text px-2">{!! $product->description !!} ...</p>
                                 <div class="portfolio-info">
-
                                     <h4 class="text-center font-weight-bold">{{$product->title}}</h4>
-
                                     <p class="card-text px-2">{!! Str::limit(strip_tags($product->description), 100) !!} ...</p>
                                     <p class="card-text"><strong>Model:</strong>  {!!$product->model!!}</p>
                                     <p class="card-text"><strong>Category:</strong> {!!$product->category!!}</p>
                                     <p class="card-text"><strong>Status:</strong> {!!$product->status= 1 ? 'Available' :'Not Available'  !!}</p>
-{{--                                    <p class="card-text"><strong>Stock:</strong> {!!$product->stock!!}</p>--}}
-
                                 </div>
                             </a>
                         </div>
                     @endforeach
-                </div>
+                        <a class="btn btn-outline-warning  text-center mt-5"  target="_blank" href="{{route('front.product')}}"><b>View MORE PRODUCTS</b></a>
 
+                </div>
             </div>
-        </section><!-- End Product Section -->
+
+        </section><!-- End Products Boxes Section -->
+
 
         <!-- ======= Gallery Section ======= -->
         <section id="gallery" class="portfolio">

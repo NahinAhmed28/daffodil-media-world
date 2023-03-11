@@ -149,7 +149,7 @@ class ProductController extends Controller
         }
 
         $product->update([
-            'name' => $request->title,
+            'title' => $request->title,
             'description' => $request->description,
             'model' => $request->model,
             'category' => $request->category,
