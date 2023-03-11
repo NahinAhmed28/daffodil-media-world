@@ -16,7 +16,7 @@
                     <ul>
                         <li><a href="{{route('front.about')}}">About</a></li>
                         <li><a href="{{route('front.mission')}}">Mission And Vision</a></li>
-                        <li><a href="{{route('front.expertise')}}">Expertise</a></li>
+{{--                        <li><a href="{{route('front.expertise')}}">Expertise</a></li>--}}
                     </ul>
                 </li>
 

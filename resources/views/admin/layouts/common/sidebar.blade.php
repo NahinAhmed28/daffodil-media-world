@@ -127,28 +127,28 @@
                 </li>
 
 
-                {{--Expertise--}}
-                <li>
-                    <a href="#">
-                        <i class="metismenu-icon pe-7s-users"></i>
-                        Expertise
-                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="{{route('expertise.create')}}">
-                                <i class="metismenu-icon">
-                                </i>Create
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{route('expertise.index')}}">
-                                <i class="metismenu-icon">
-                                </i>List
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+{{--                --}}{{--Expertise--}}
+{{--                <li>--}}
+{{--                    <a href="#">--}}
+{{--                        <i class="metismenu-icon pe-7s-users"></i>--}}
+{{--                        Expertise--}}
+{{--                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>--}}
+{{--                    </a>--}}
+{{--                    <ul>--}}
+{{--                        <li>--}}
+{{--                            <a href="{{route('expertise.create')}}">--}}
+{{--                                <i class="metismenu-icon">--}}
+{{--                                </i>Create--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <a href="{{route('expertise.index')}}">--}}
+{{--                                <i class="metismenu-icon">--}}
+{{--                                </i>List--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
 
                 {{--Galleries--}}
                 <li>
