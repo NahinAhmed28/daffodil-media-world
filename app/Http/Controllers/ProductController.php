@@ -55,6 +55,9 @@ class ProductController extends Controller
             'category' => 'required',
 //            'stock' => 'required',
             'filter_id' => 'required',
+            'origin' => 'required',
+            'manufacturer' => 'required',
+            'brand' => 'required',
 
         ]);
 
@@ -79,6 +82,9 @@ class ProductController extends Controller
             'category' => $request->category,
 //            'stock' => $request->stock,
             'filter_id' => $request->filter_id,
+            'origin' => $request->origin,
+            'manufacturer' => $request->manufacturer,
+            'brand' => $request->brand,
             'status' => 1,
             'image' => $imageFileName,
         ]);
@@ -155,6 +161,9 @@ class ProductController extends Controller
             'category' => $request->category,
 //            'stock' => $request->stock,
             'status' => $request->status,
+            'manufacturer' => $request->manufacturer,
+            'origin' => $request->origin,
+            'brand' => $request->brand,
             'filter_id' => $request->filter_id,
             'image' => $productImageFileName,
 

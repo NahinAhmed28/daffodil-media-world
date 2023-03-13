@@ -30,7 +30,10 @@
                     <th>Title</th>
                     <th>Description</th>
                     <th>Model</th>
-                    <th>Stock</th>
+                    <th>Brand</th>
+{{--                    <th>Stock</th>--}}
+                    <th>Manufacturer</th>
+                    <th>Origin</th>
                     <th>status</th>
                     <th>Action </th>
                 </tr>
@@ -46,7 +49,10 @@
                         <td>{{$product->title}}</td>
                         <td>{!!$product->description!!}</td>
                         <td>{!!$product->model!!}</td>
-                        <td>{!!$product->stock!!}</td>
+                        <td>{!!$product->brand!!}</td>
+{{--                        <td>{!!$product->stock!!}</td>--}}
+                        <td>{!!$product->manufacturer!!}</td>
+                        <td>{!!$product->origin!!}</td>
                         <td>{!!$product->status!!}</td>
                         <td>
                             <a href="{{ route('product.edit',[$product->id]) }}" title="Edit">

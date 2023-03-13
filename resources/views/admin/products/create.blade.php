@@ -79,6 +79,37 @@
             </div>
             <div class="col-sm-12 col-md-6">
                 <div class="form-group">
+                    <label for="title">Manufacturer</label>
+                    <textarea class="form-control {{ $errors->has('manufacturer') ? 'is-invalid' : '' }}" id="manufacturer" placeholder="Write Your manufacturer"
+                              name="manufacturer"></textarea>
+                    @if ($errors->has('manufacturer'))
+                        <div class="invalid-feedback">{{ $errors->first('manufacturer') }}</div>
+                    @endif
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="title">Brand</label>
+                    <textarea class="form-control {{ $errors->has('brand') ? 'is-invalid' : '' }}" id="brand" placeholder="Write Your brand"
+                              name="brand"></textarea>
+                    @if ($errors->has('brand'))
+                        <div class="invalid-feedback">{{ $errors->first('brand') }}</div>
+                    @endif
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12">
+                <div class="form-group  m-form__group">
+                    <label class="form-control-label"><span class="text-danger">*</span> Origin </label>
+                    <textarea class="form-control {{ $errors->has('origin') ? 'is-invalid' : '' }}" id="origin" placeholder="" rows="3" name="origin"
+                              cols="50">{{ old('origin', $product->origin)
+                                }}</textarea>
+                    @if ($errors->has('origin'))
+                        <div class="invalid-feedback">{{ $errors->first('origin') }}</div>
+                    @endif
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
                     <label for="title">Filter Name</label>
                     <select class="form-control m-bootstrap-select m_selectpicker" name="filter_id" data-live-search="true">
                         <option value="">---- Select ----</option>
