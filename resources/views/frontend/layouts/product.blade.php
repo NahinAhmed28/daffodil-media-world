@@ -51,6 +51,9 @@
                                     <p class="card-text px-2">{!! Str::limit(strip_tags($product->description), 100) !!} ...</p>
                                     <p class="card-text"><strong>Model:</strong>  {!!$product->model!!}</p>
                                     <p class="card-text"><strong>Category:</strong> {!!$product->category!!}</p>
+                                    <p class="card-text"><strong>Brand:</strong> {!!$product->brand!!}</p>
+                                    <p class="card-text"><strong>Manufacturer:</strong> {!!$product->manufacturer!!}</p>
+                                    <p class="card-text"><strong>Origin:</strong> {!!$product->origin!!}</p>
                                     <p class="card-text"><strong>Status:</strong> {!!$product->status= 1 ? 'Available' :'Not Available'  !!}</p>
                                 </div>
                             </a>
