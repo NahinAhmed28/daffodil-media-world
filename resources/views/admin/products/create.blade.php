@@ -97,12 +97,11 @@
                     @endif
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12">
-                <div class="form-group  m-form__group">
-                    <label class="form-control-label"><span class="text-danger">*</span> Origin </label>
-                    <textarea class="form-control {{ $errors->has('origin') ? 'is-invalid' : '' }}" id="origin" placeholder="" rows="3" name="origin"
-                              cols="50">{{ old('origin', $product->origin)
-                                }}</textarea>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="title">Origin</label>
+                    <textarea class="form-control {{ $errors->has('origin') ? 'is-invalid' : '' }}" id="origin" placeholder="Write Your origin"
+                              name="origin"></textarea>
                     @if ($errors->has('origin'))
                         <div class="invalid-feedback">{{ $errors->first('origin') }}</div>
                     @endif

@@ -21,6 +21,9 @@ return new class extends Migration
             $table->string('image');
             $table->string('model');
             $table->string('category');
+            $table->string('manufacturer')->nullable()->default('default');;
+            $table->string('brand')->nullable()->default('default');;
+            $table->string('origin')->nullable()->default('default');;
             $table->string('stock')->nullable();
             $table->tinyInteger('status')->default('1');
             $table->timestamps();
