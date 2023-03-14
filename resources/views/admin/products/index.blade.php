@@ -47,7 +47,7 @@
                                  src="{{ asset('assets/uploads/product/'.$product->image)}}">
                         </td>
                         <td>{{$product->title}}</td>
-                        <td>{!!$product->description!!}</td>
+                        <td>{!! Str::limit(strip_tags($product->description), 300) !!}</td>
                         <td>{!!$product->model!!}</td>
                         <td>{!!$product->brand!!}</td>
 {{--                        <td>{!!$product->stock!!}</td>--}}
