@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-@stack('styles')
 <head>
 
     @include('admin.layouts.common.head')
+    @stack('styles')
 </head>
 
 <body>
