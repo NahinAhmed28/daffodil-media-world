@@ -42,9 +42,10 @@ class ContactController extends Controller
         Alert::success('Message Submitted', 'You Message has been sent successfully');
         return redirect()->back();
     }
-    public function show(Contact $data)
+    public function show($id)
     {
-        //
+        $data = Contact::find($id);
+        return view('admin.contacts.show', compact('data'));
     }
     public function edit($id)
     {
