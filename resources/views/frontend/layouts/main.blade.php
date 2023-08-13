@@ -138,6 +138,7 @@
             </div>
         </section><!-- End About Boxes Section -->
 
+
         <!-- ======= Clients and Organization Section ======= -->
         <section id="organization" class="clients">
             <div class="container" data-aos="zoom-in">
@@ -157,94 +158,100 @@
             </div>
         </section><!-- End Clients and Organization Section -->
 
-{{--        <!-- ======= Expertises Section ======= -->--}}
-{{--        <section id="about-boxes" class="about-boxes">--}}
-{{--            <div class="container" data-aos="fade-up">--}}
-{{--                <div class="section-title">--}}
-{{--                    <h2>Expertises</h2>--}}
-{{--                    <p>Check our Expertises</p>--}}
-{{--                </div>--}}
-{{--                <div class="tab-content">--}}
-{{--                    <ul class="nav nav-tabs row d-flex ">--}}
-{{--                        @foreach ($expertises as $expertise)--}}
-{{--                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">--}}
-{{--                                <a href="{{ asset('assets/uploads/expertise/'.$expertise->image) }}"--}}
-{{--                                   data-gallery="expertiseGallery" class="portfolio-lightbox preview-link "--}}
-{{--                                   title="{{$expertise->title}}">--}}
-{{--                                    <img src="{{ asset('assets/uploads/expertise/'.$expertise->image)}}" class="img-fluid" alt="">--}}
-{{--                                    <div class="portfolio-info">--}}
-{{--                                        <h4 class="text-center font-weight-bold">{{$expertise->title}}</h4>--}}
-{{--                                        <p class="card-text px-2">{!! Str::limit(strip_tags($expertise->description), 100) !!} ...</p>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        @endforeach--}}
-{{--                    </ul>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </section><!-- End Expertises Section -->--}}
+
 
         <!-- ======= Services Boxes Section ======= -->
-        <section id="about-boxes" class="about-boxes">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Our</h2>
-                    <p>Services</p>
-                </div>
-                <div class="row">
-                    @foreach ($services as $service)
 
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <a href="{{ asset('assets/uploads/service/'.$service->image) }}"
-                               data-gallery="serviceGallery" class="portfolio-lightbox preview-link "
-                               title="{{$service->description}}">
-                                <img src="{{ asset('assets/uploads/service/'.$service->image)}}" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4 class="text-center font-weight-bold">{{$service->title}}</h4>
-                                    <p class="card-text px-2">{!! Str::limit(strip_tags($service->description), 100) !!} ...</p>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Our</h2>
+                <p>Services</p>
             </div>
-        </section><!-- End Services Boxes Section -->
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                @foreach ($services as $i => $service)
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top" src="{{ asset('assets/uploads/service/' . $service->image) }}" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold text-success">{{ $service->title }}</h5>
+                                <p class="card-text px-2">{!! $service->description !!}</p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#serviceModal-{{$i}}">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="serviceModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="{{ asset('assets/uploads/service/' . $service->image) }}" alt="Product Image">
+                                        <div>{!! $service->description !!}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+
+        <!-- End Services Boxes Section -->
 
         <!-- ======= Products Boxes Section ======= -->
-        <section id="about-boxes" class="about-boxes" style="background: white!important;">
-            <div class="container" data-aos="fade-up" >
-                <div class="section-title">
-                    <h2>Our</h2>
-                    <p>Products</p>
-                </div>
-                <div class="row" >
-                    @foreach ($products as $product)
 
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <a href=""
-                               data-gallery="productGallery" class="portfolio-lightbox preview-link "
-                               title="{{$product->description}}">
-                                <img src="{{ asset('assets/uploads/product/'.$product->image)}}" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4 class="text-center font-weight-bold">{{$product->title}}</h4>
-                                    <p class="card-text px-2">{!! Str::limit(strip_tags($product->description), 100) !!} ...</p>
-                                    <p class="card-text"><strong>Model:</strong>  {!!$product->model!!}</p>
-                                    <p class="card-text"><strong>Category:</strong> {!!$product->category!!}</p>
-                                    <p class="card-text"><strong>Brand:</strong> {!!$product->brand!!}</p>
-                                    <p class="card-text"><strong>Manufacturer:</strong> {!!$product->manufacturer!!}</p>
-                                    <p class="card-text"><strong>Origin:</strong> {!!$product->origin!!}</p>
-                                    <p class="card-text"><strong>Status:</strong> {!!$product->status= 1 ? 'Available' :'Not Available'  !!}</p>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                        <a class="btn btn-outline-warning  text-center mt-5"  target="_blank" href="{{route('front.product')}}"><b>View MORE PRODUCTS</b></a>
+        <!-- =======model test Products Boxes Section ======= -->
 
-                </div>
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Our</h2>
+                <p>Products</p>
             </div>
+        </div>
 
-        </section><!-- End Products Boxes Section -->
+        <div class="container">
+            <div class="row justify-content-center">
+                @foreach ($products as $i => $product)
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top" src="{{ asset('assets/uploads/product/' . $product->image) }}" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold text-success">{{ $product->title }}</h5>
+                                <p class="card-text px-2">{!! Str::limit(strip_tags($product->description), 99) !!} ...</p>
+                                <p class="card-text"><strong>Model:</strong>  {!!$product->model!!}</p>
+                                <p class="card-text"><strong>Category:</strong> {!!$product->category!!}</p>
+                                <p class="card-text"><strong>Brand:</strong> {!!$product->brand!!}</p>
+                                <p class="card-text"><strong>Manufacturer:</strong> {!!$product->manufacturer!!}</p>
+                                <p class="card-text"><strong>Origin:</strong> {!!$product->origin!!}</p>
+                                <p class="card-text"><strong>Status:</strong> {!!$product->status= 1 ? 'Available' :'Not Available'  !!}</p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productModal-{{$i}}">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="productModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="{{ asset('assets/uploads/product/' . $product->image) }}" alt="Product Image">
+                                        <div>{!! $product->description !!}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+
+        <!-- End Products Boxes Section -->
+
 
 
         <!-- ======= Gallery Section ======= -->
@@ -275,38 +282,44 @@
         </section><!-- End Gallery Section -->
 
         <!-- ======= Team Section ======= -->
-        <section id="team" class="team section-bg">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Team</h2>
-                    <p>Check our Team</p>
-                </div>
-                <div class="row">
-                    @foreach ($members as $member)
-                        <div class="col-lg-4 col-md-6">
-                            <div class="member" data-aos="fade-up" data-aos-delay="100">
-                                <div class="pic"><img src="{{ asset('assets/uploads/member/'. $member->image) }}"
-                                                      class="img-fluid" alt=""></div>
-                                <div class="member-info">
-                                    <h4>{{$member->name}}</h4>
-                                    <span>{!! $member->designation !!}</span>
-                                    <div class="social">
 
-
-                                    </div>
-                                    <div class="portfolio-info">
-                                        <a href="{{ asset('assets/uploads/member/'.$member->image) }}"
-                                           data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{$member->message}}">More
-                                            {{--                                    <i class="bx bx-zoom-in"></i>--}}
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Team</h2>
+                <p>Check our Team</p>
             </div>
-        </section><!-- End Team Section -->
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                @foreach ($members as $i => $member)
+                                        <div class="col-md-4 mb-4">
+                                            <div class="card">
+                                                <img class="card-img-top" src="{{ asset('assets/uploads/member/' . $member->image) }}" alt="Product Image">
+                                                <div class="card-body">
+                                                    <h5 class="card-title font-weight-bold text-success">{{ $member->name }}</h5>
+                                                    <p class="card-text px-2">{!! $member->designation !!}</p>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#memberModal-{{$i}}">
+                                                        View Details
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal fade" id="memberModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body">
+                                                            <img class="img-fluid" src="{{ asset('assets/uploads/member/' . $member->image) }}" alt="Product Image">
+                                                            <div>{!! $member->designation !!}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+            </div>
+        </div>
+<!-- End Team Section -->
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">

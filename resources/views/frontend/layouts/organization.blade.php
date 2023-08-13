@@ -15,41 +15,46 @@
 
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <h2>Team</h2>
-                <p>Check our Team</p>
-            </div>
-            <div class="row">
-                @foreach ($members as $member)
-                    <div class="col-lg-4 col-md-6">
-                        <div class="member" data-aos="fade-up" data-aos-delay="100">
-                            <div class="pic"><img src="{{ asset('assets/uploads/member/'. $member->image) }}"
-                                                  class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>{{$member->name}}</h4>
-                                <span>{!! $member->designation !!}</span>
-                                <div class="social">
-                                    {{--                                <a href=""><i class="bi bi-twitter"></i></a>--}}
-                                    {{--                                <a href=""><i class="bi bi-facebook"></i></a>--}}
-                                    {{--                                <a href=""><i class="bi bi-instagram"></i></a>--}}
-                                    {{--                                <a href=""><i class="bi bi-linkedin"></i></a>--}}
 
-                                </div>
-                                <div class="portfolio-info">
-                                    <a href="{{ asset('assets/uploads/member/'.$member->image) }}"
-                                       data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{$member->message}}">More
-                                        {{--                                    <i class="bx bx-zoom-in"></i>--}}
-                                    </a>
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Team</h2>
+            <p>Check our Team</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            @foreach ($members as $i => $member)
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ asset('assets/uploads/member/' . $member->image) }}" alt="Product Image">
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold  text-success">{{ $member->name }}</h5>
+                            <p class="card-text px-2">{!! $member->designation !!}</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#memberModal-{{$i}}">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="memberModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <img class="img-fluid" src="{{ asset('assets/uploads/member/' . $member->image) }}" alt="Product Image">
+                                    <div>{!! $member->designation !!}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
         </div>
-    </section><!-- End Team Section -->
+    </div>
+    <!-- End Team Section -->
+
+
     <!-- ======= Clients Section ======= -->
     <section id="organization" class="clients">
         <div class="container" data-aos="zoom-in">

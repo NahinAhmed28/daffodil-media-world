@@ -12,57 +12,55 @@
 
     <!-- Start #main -->
     <main id="main">
-        <!-- ======= Product Section ======= -->
-        <section id="about-boxes" class="about-boxes" style="background: white!important;">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h2>Our</h2>
-                            <p>Products</p></div>
-                        <div class="col-md-6 text-end">
-                            <div class="input-group">
-                              @if( request()->is('front/product*'))
-                                    <form action="{{ route('front.searchProduct') }}" method="GET">
-                                        <input type="text" class="border border-4 border-success rounded"
-                                               placeholder="Search Products" name="search" aria-label="search" required/>
-                                        <button type="submit" class="btn btn-outline-primary">Search</button>
-                                    </form>
-                              @else()
-                              @endif
+        <!-- ======= Products Boxes Section ======= -->
 
+        <!-- =======model test Products Boxes Section ======= -->
+
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Our</h2>
+                <p>Products</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                @foreach ($products as $i => $product)
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top" src="{{ asset('assets/uploads/product/' . $product->image) }}" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold text-success">{{ $product->title }}</h5>
+                                <p class="card-text px-2">{!! Str::limit(strip_tags($product->description), 99) !!} ...</p>
+                                <p class="card-text"><strong>Model:</strong>  {!!$product->model!!}</p>
+                                <p class="card-text"><strong>Category:</strong> {!!$product->category!!}</p>
+                                <p class="card-text"><strong>Brand:</strong> {!!$product->brand!!}</p>
+                                <p class="card-text"><strong>Manufacturer:</strong> {!!$product->manufacturer!!}</p>
+                                <p class="card-text"><strong>Origin:</strong> {!!$product->origin!!}</p>
+                                <p class="card-text"><strong>Status:</strong> {!!$product->status= 1 ? 'Available' :'Not Available'  !!}</p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productModal-{{$i}}">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="productModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="{{ asset('assets/uploads/product/' . $product->image) }}" alt="Product Image">
+                                        <div>{!! $product->description !!}</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
-
-
-                <div class="row ">
-                    @foreach ($products as $product)
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app ">
-                            <a href=""
-                               data-gallery="productGallery" class="portfolio-lightbox preview-link text-dark"
-                               title="{{$product->description}}">
-                                <img src="{{ asset('assets/uploads/product/'.$product->image)}}" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4 class="text-center font-weight-bold">{{$product->title}}</h4>
-                                    <p class="card-text px-2">{!! Str::limit(strip_tags($product->description), 100) !!} ...</p>
-                                    <p class="card-text"><strong>Model:</strong>  {!!$product->model!!}</p>
-                                    <p class="card-text"><strong>Category:</strong> {!!$product->category!!}</p>
-                                    <p class="card-text"><strong>Brand:</strong> {!!$product->brand!!}</p>
-                                    <p class="card-text"><strong>Manufacturer:</strong> {!!$product->manufacturer!!}</p>
-                                    <p class="card-text"><strong>Origin:</strong> {!!$product->origin!!}</p>
-                                    <p class="card-text"><strong>Status:</strong> {!!$product->status= 1 ? 'Available' :'Not Available'  !!}</p>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-
+                @endforeach
             </div>
-        </section><!-- End Product Section -->
+        </div>
+
+
+        <!-- End Products Boxes Section -->
     </main><!-- End #main -->
 
     @push('scripts')

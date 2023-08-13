@@ -13,32 +13,47 @@
     <!-- Start #main -->
     <main id="main">
 
-        <!-- ======= About Boxes Section ======= -->
-        <section id="about-boxes" class="about-boxes">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Our</h2>
-                    <p>Services</p>
-                </div>
-                <div class="row">
-                    @foreach ($services as $service)
+        <!-- ======= Services Boxes Section ======= -->
 
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <a href="{{ asset('assets/uploads/service/'.$service->image) }}"
-                               data-gallery="serviceGallery" class="portfolio-lightbox preview-link "
-                               title="{{$service->description}}">
-                                <img src="{{ asset('assets/uploads/service/'.$service->image)}}" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4 class="text-center font-weight-bold">{{$service->title}}</h4>
-                                        <p class="card-text px-2">{!! Str::limit(strip_tags($service->description), 100) !!} ...</p>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Our</h2>
+                <p>Services</p>
             </div>
-        </section><!-- End About Boxes Section -->
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                @foreach ($services as $i => $service)
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top" src="{{ asset('assets/uploads/service/' . $service->image) }}" alt="Product Image">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold text-success">{{ $service->title }}</h5>
+                                <p class="card-text px-2">{!! $service->description !!}</p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#serviceModal-{{$i}}">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="serviceModal-{{$i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="{{ asset('assets/uploads/service/' . $service->image) }}" alt="Product Image">
+                                        <div>{!! $service->description !!}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+
+        <!-- End Services Boxes Section -->
     </main><!-- End #main -->
 
     @push('scripts')
